@@ -235,6 +235,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.raphael.rc \
     init.target.rc \
+    init.power.rc \
     ueventd.qcom.rc
 
 # IPA
