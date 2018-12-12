@@ -28,8 +28,9 @@
 #
 on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules adsp_loader_dlkm apr_dlkm cs35l41_dlkm hdmi_dlkm machine_dlkm mbhc_dlkm native_dlkm pinctrl_wcd_dlkm platform_dlkm q6_dlkm q6_notifier_dlkm q6_pdr_dlkm stub_dlkm swr_ctrl_dlkm swr_dlkm tas2557_dlkm usf_dlkm wcd934x_dlkm wcd9360_dlkm wcd9xxx_dlkm wcd_core_dlkm wcd_cpe_dlkm wcd_spi_dlkm wglink_dlkm wsa881x_dlkm
-    write /proc/sys/kernel/sched_boost 1
     symlink /data/tombstones /tombstones
+    # Disable EAS
+    write /sys/kernel/debug/sched_features NO_ENERGY_AWARE
 
 on init
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
@@ -186,6 +187,9 @@ on boot
     write /sys/class/thermal/thermal_message/sconfig 10
 
 on property:sys.boot_completed=1
+    # Enable EAS
+    write /sys/kernel/debug/sched_features ENERGY_AWARE
+
     # Enable UFS powersaving
     write /sys/devices/platform/soc/${ro.boot.bootdevice}/clkgate_enable 1
     write /sys/devices/platform/soc/${ro.boot.bootdevice}/hibern8_on_idle_enable 1
@@ -264,6 +268,9 @@ on charger
 
     start qcom-post-boot
     start vendor.hvdcp_opti
+
+    # Enable EAS
+    write /sys/kernel/debug/sched_features ENERGY_AWARE
 
 service vendor.thermal-engine /vendor/bin/thermal-engine
    class main
