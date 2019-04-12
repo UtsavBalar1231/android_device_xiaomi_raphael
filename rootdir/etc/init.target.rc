@@ -85,67 +85,12 @@ on init
     write /dev/stune/top-app/schedtune.boost 10
     write /dev/stune/top-app/schedtune.prefer_idle 1
 
-    # Setup cpusets used by the VR services.
-    mkdir /dev/cpuset/kernel 0750 root system
-    write /dev/cpuset/kernel/cpus 0
-    write /dev/cpuset/kernel/mems 0
-    chown system system /dev/cpuset/kernel/tasks
-    chown system system /dev/cpuset/kernel/cpus
-    chmod 0660 /dev/cpuset/kernel/tasks
-    chmod 0660 /dev/cpuset/kernel/cpus
-
     mkdir /dev/cpuset/camera-daemon
     write /dev/cpuset/camera-daemon/cpus 0-7
     write /dev/cpuset/camera-daemon/mems 0
     chown system system /dev/cpuset/camera-daemon
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
-
-    mkdir /dev/cpuset/system 0750 root system
-    write /dev/cpuset/system/cpus 0
-    write /dev/cpuset/system/mems 0
-    chown system system /dev/cpuset/system/tasks
-    chmod 0660 /dev/cpuset/system/tasks
-
-    mkdir /dev/cpuset/system/performance 0750 root system
-    write /dev/cpuset/system/performance/cpus 0
-    write /dev/cpuset/system/performance/mems 0
-    chown system system /dev/cpuset/system/performance/tasks
-    chmod 0660 /dev/cpuset/system/performance/tasks
-
-    mkdir /dev/cpuset/system/background 0750 root system
-    write /dev/cpuset/system/background/cpus 0
-    write /dev/cpuset/system/background/mems 0
-    chown system system /dev/cpuset/system/background/tasks
-    chmod 0660 /dev/cpuset/system/background/tasks
-
-    mkdir /dev/cpuset/application 0750 root system
-    write /dev/cpuset/application/cpus 0
-    write /dev/cpuset/application/mems 0
-    chown system system /dev/cpuset/application/tasks
-    chmod 0660 /dev/cpuset/application/tasks
-
-    mkdir /dev/cpuset/application/performance 0750 root system
-    write /dev/cpuset/application/performance/cpus 0
-    write /dev/cpuset/application/performance/mems 0
-    chown system system /dev/cpuset/application/performance/tasks
-    chmod 0660 /dev/cpuset/application/performance/tasks
-
-    mkdir /dev/cpuset/application/background 0750 root system
-    write /dev/cpuset/application/background/cpus 0
-    write /dev/cpuset/application/background/mems 0
-    chown system system /dev/cpuset/application/background/tasks
-    chmod 0660 /dev/cpuset/application/background/tasks
-
-    write /dev/cpuset/kernel/cpus 0-7
-    write /dev/cpuset/system/cpus 0-7
-    write /dev/cpuset/system/performance/cpus 0-7
-    write /dev/cpuset/system/background/cpus 0-7
-    write /dev/cpuset/system/cpus 0-7
-    write /dev/cpuset/application/cpus 0-7
-    write /dev/cpuset/application/performance/cpus 0-7
-    write /dev/cpuset/application/background/cpus 0-7
-    write /dev/cpuset/application/cpus 0-7
 
 on early-fs
     start vold
@@ -218,15 +163,6 @@ on property:sys.boot_completed=1
     write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
-
-    # Update DVR cpusets to runtime values.
-    # Kernel cpuset will be apply on PowerHAL
-    write /dev/cpuset/system/performance/cpus 6-7
-    write /dev/cpuset/system/background/cpus 0-1
-    write /dev/cpuset/system/cpus 0-1,6-7
-    write /dev/cpuset/application/performance/cpus 4-5
-    write /dev/cpuset/application/background/cpus 0-1
-    write /dev/cpuset/application/cpus 0-1,4-5
 
 on property:vendor.post_boot.parsed=1
     # Enable idle state listener
