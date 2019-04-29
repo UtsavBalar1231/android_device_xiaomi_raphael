@@ -1,4 +1,8 @@
 type system_manufacturer_prop, property_type;
 type persist_sensors_prop, property_type;
+
+# Camera read only property
+type camera_ro_prop, property_type;
+
 # PowerHal
 type power_prop, property_type;
