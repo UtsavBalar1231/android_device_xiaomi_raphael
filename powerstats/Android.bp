@@ -17,7 +17,11 @@ cc_binary {
     relative_install_path: "hw",
     vintf_fragments: ["android.hardware.power.stats@1.0-service.xiaomi_sm8150.xml"],
     init_rc: ["android.hardware.power.stats@1.0-service.xiaomi_sm8150.rc"],
-    srcs: ["service.cpp", "RailDataProvider.cpp"],
+    srcs: [
+        "service.cpp",
+        "RailDataProvider.cpp",
+        "GpuStateResidencyDataProvider.cpp",
+    ],
     cflags: [
         "-Wall",
         "-Werror",
