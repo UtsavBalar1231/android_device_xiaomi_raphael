@@ -135,15 +135,7 @@ on boot
     write /sys/class/thermal/thermal_message/sconfig 10
 
 on property:sys.boot_completed=1
-    # Enable EAS
-    write /sys/kernel/debug/sched_features ENERGY_AWARE
-
-    # Enable UFS powersaving
-    write /sys/devices/platform/soc/${ro.boot.bootdevice}/clkgate_enable 1
-    write /sys/devices/platform/soc/${ro.boot.bootdevice}/hibern8_on_idle_enable 1
-
-    # Enable powersaving
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+    setprop vendor.setup.power 1
 
     # Runtime fs tuning
     write /sys/block/sda/queue/read_ahead_kb 128
@@ -214,9 +206,6 @@ on charger
 
     start qcom-post-boot
     start vendor.hvdcp_opti
-
-    # Enable EAS
-    write /sys/kernel/debug/sched_features ENERGY_AWARE
 
 service vendor.thermal-engine /vendor/bin/thermal-engine
    class main
