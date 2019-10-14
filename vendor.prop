@@ -191,3 +191,8 @@ debug.sf.early_gl_app_phase_offset_ns=15000000
 # WFD
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
+
+# ZRAM writeback
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=180
+ro.zram.periodic_wb_delay_hours=24
