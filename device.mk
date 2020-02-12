@@ -200,6 +200,10 @@ PRODUCT_PACKAGES += \
     f2fs_io \
     check_f2fs
 
+# Freeform Multiwindow
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml
+
 # GPS
 LOC_HIDL_VERSION = 4.0
 
