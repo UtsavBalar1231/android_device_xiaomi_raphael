@@ -25,8 +25,9 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter raphael,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
+
+ifneq ($(filter raphael,$(TARGET_DEVICE)),)
 include $(CLEAR_VARS)
 
 IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so

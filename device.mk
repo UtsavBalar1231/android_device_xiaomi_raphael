@@ -155,6 +155,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.voice.path.for.pcm.voip=false
 
 PRODUCT_PACKAGES += \
+    audio_amplifier.msmnile
+
+PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.soundtrigger@2.2-impl \
     android.hardware.soundtrigger@2.3-impl
