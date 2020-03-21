@@ -58,9 +58,9 @@ on init
     write /sys/block/dm-2/queue/read_ahead_kb 2048
     write /sys/block/dm-3/queue/read_ahead_kb 2048
     write /sys/block/dm-4/queue/read_ahead_kb 2048
+
     # Disable UFS powersaving
     write /sys/devices/platform/soc/${ro.boot.bootdevice}/clkgate_enable 0
-    write /sys/devices/platform/soc/${ro.boot.bootdevice}/hibern8_on_idle_enable 0
 
     # Disable powersaving
     write /sys/module/lpm_levels/parameters/sleep_disabled 1
