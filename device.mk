@@ -394,6 +394,7 @@ PRODUCT_PACKAGES += \
     init.mi.usb.sh \
     init.qti.dcvs.sh \
     init.raphael.rc \
+    init.raphael.nfc.rc \
     init.raphael.usb.rc \
     init.raphael.usb.sh \
     init.raphael.wlan.rc \

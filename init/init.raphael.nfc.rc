@@ -1,0 +1,5 @@
+on init && property:ro.boot.hwc=GLOBAL
+    setprop ro.boot.product.hardware.sku raphael
+
+on init && property:ro.boot.hwc=CN
+    setprop ro.boot.product.hardware.sku raphael
