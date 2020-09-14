@@ -336,13 +336,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     PixelLiveWallpaperPrebuilt
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.xiaomi_msmnile
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/power/config/msmnile/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
-
 # QMI
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
