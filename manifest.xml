@@ -585,26 +585,6 @@
         <fqname>@3.0::IQtiMapper/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.iop</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IIop</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::IIop/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.perf</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>IPerf</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::IPerf/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.qseecom</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -861,16 +841,6 @@
             <instance>imsrtpservice</instance>
         </interface>
         <fqname>@2.1::IRTPService/imsrtpservice</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.power.pasrmanager</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IPasrManager</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IPasrManager/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.xiaomi.hardware.fingerprintextension</name>

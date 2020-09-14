@@ -574,6 +574,10 @@ vendor/firmware/ipa_fws.b04
 vendor/firmware/ipa_fws.elf
 vendor/firmware/ipa_fws.mdt
 
+# IRQ balancer
+vendor/bin/msm_irqbalance
+vendor/etc/msm_irqbalance.conf
+
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
 vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti
@@ -655,39 +659,6 @@ vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
 vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc
 vendor/lib64/libhexagon_nn_stub.so
-
-# Pasrmanager
-vendor/bin/hw/vendor.qti.power.pasrmanager@1.0-service
-vendor/etc/init/vendor.qti.power.pasrmanager@1.0-service.rc
-vendor/lib64/hw/vendor.qti.power.pasrmanager@1.0-impl.so
-vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
-
-# Perf
-vendor/bin/hw/vendor.qti.hardware.perf@2.0-service
-vendor/bin/msm_irqbalance
-vendor/etc/msm_irqbalance.conf
-vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc
-vendor/etc/lm/AdaptLaunchFeature.xml
-vendor/etc/lm/AppClassifierFeature.xml
-vendor/etc/lm/GameOptimizationFeature.xml
-vendor/etc/perf/commonresourceconfigs.xml
-vendor/etc/perf/perfboostsconfig.xml
-vendor/etc/perf/perfconfigstore.xml
-vendor/etc/perf/targetconfig.xml
-vendor/etc/perf/targetresourceconfigs.xml
-vendor/etc/perf/thermalboost.conf
-vendor/lib/libperfgluelayer.so
-vendor/lib/libqti-perfd-client.so
-vendor/lib/libqti-perfd.so
-vendor/lib/libqti-util.so
-vendor/lib/vendor.qti.hardware.perf@2.0.so
-vendor/lib64/liblearningmodule.so
-vendor/lib64/libmeters.so
-vendor/lib64/libperfgluelayer.so
-vendor/lib64/libqti-perfd-client.so
-vendor/lib64/libqti-perfd.so
-vendor/lib64/libqti-util.so
-vendor/lib64/vendor.qti.hardware.perf@2.0.so
 
 # Peripheral
 vendor/bin/pm-proxy
@@ -957,7 +928,6 @@ vendor/bin/cnss-daemon
 vendor/bin/nv_mac
 
 # Misc
--vendor/app/pasrservice/pasrservice.apk
 vendor/bin/adpl
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/bin/ipacm-diag
@@ -1018,7 +988,6 @@ vendor/lib64/libcacertclient.so
 vendor/lib64/libft2vendor.so
 vendor/lib64/libgeofencing.so
 vendor/lib64/libnpu.so
-vendor/lib64/libperfconfig.so
 vendor/lib64/libqcrildatactl.so
 vendor/lib64/libqsap_sdk.so
 vendor/lib64/libskewknob.so

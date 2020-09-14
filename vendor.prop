@@ -158,12 +158,6 @@ persist.dbg.wfc_avail_ovr=1
 # Memory
 ro.vendor.qti.va_aosp.support=1
 
-# Property to enable/disable PASR
-vendor.power.pasr.enabled=true
-
-# Perf
-ro.vendor.extension_library=libqti-perfd-client.so
-
 # RIL
 persist.radio.apm_sim_not_pwdn=1
 persist.radio.dynamic_sar=false
