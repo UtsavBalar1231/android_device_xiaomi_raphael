@@ -117,34 +117,6 @@ int main(int /* argc */, char** /* argv */) {
     auto wlanSdp = std::make_shared<WlanStateResidencyDataProvider>(wlanId);
     service->addStateResidencyDataProvider(std::move(wlanSdp));
 
-    // Add Airbrush power entity
-    StateResidencyConfig airStateConfig = {
-        .entryCountSupported = true,
-        .entryCountPrefix = "Cumulative count:",
-        .totalTimeSupported = true,
-        .totalTimePrefix = "Cumulative duration msec:",
-        .lastEntrySupported = true,
-        .lastEntryPrefix = "Last entry timestamp msec:",
-    };
-    std::vector<std::pair<std::string, std::string>> airStateHeaders = {
-        std::make_pair("Active", "ACTIVE"),
-        std::make_pair("Sleep", "SLEEP"),
-        std::make_pair("Deep sleep", "DEEP SLEEP"),
-        std::make_pair("Suspend", "SUSPEND"),
-        std::make_pair("Off", "OFF"),
-        std::make_pair("Unknown", "UNKNOWN"),
-    };
-
-    auto airSdp =
-        std::make_shared<GenericStateResidencyDataProvider>(
-            "/sys/devices/platform/soc/soc:abc-sm/state_stats");
-
-    uint32_t airId = service->addPowerEntity("Airbrush", PowerEntityType::SUBSYSTEM);
-    airSdp->addEntity(airId, PowerEntityConfig("Airbrush Subsystem Power Stats",
-        generateGenericStateResidencyConfigs(airStateConfig, airStateHeaders)));
-
-    service->addStateResidencyDataProvider(std::move(airSdp));
-
     // Configure the threadpool
     configureRpcThreadpool(1, true /*callerWillJoin*/);
 
