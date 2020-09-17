@@ -14,9 +14,9 @@
 // limitations under the License.
 
 cc_binary {
-    name: "vendor.lineage.livedisplay@2.0-service.xiaomi_msmnile",
-    vintf_fragments: ["vendor.lineage.livedisplay@2.0-service.xiaomi_msmnile.xml"],
-    init_rc: ["vendor.lineage.livedisplay@2.0-service.xiaomi_msmnile.rc"],
+    name: "vendor.lineage.livedisplay@2.0-service.raphael",
+    vintf_fragments: ["vendor.lineage.livedisplay@2.0-service.raphael.xml"],
+    init_rc: ["vendor.lineage.livedisplay@2.0-service.raphael.rc"],
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     srcs: [

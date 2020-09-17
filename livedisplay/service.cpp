@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.livedisplay@2.0-service.xiaomi_msmnile"
+#define LOG_TAG "vendor.lineage.livedisplay@2.0-service.raphael"
 
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>
