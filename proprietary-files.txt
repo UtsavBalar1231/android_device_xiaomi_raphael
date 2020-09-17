@@ -1,3 +1,7 @@
+# AD
+vendor/lib/libdpps.so
+vendor/lib64/libdpps.so
+
 # ADSP
 vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
