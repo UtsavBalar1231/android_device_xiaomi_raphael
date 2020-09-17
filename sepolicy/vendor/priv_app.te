@@ -1,0 +1,2 @@
+dontaudit priv_app sysfs_msm_subsys:file read;
+dontaudit priv_app vendor_default_prop:file { open getattr map };

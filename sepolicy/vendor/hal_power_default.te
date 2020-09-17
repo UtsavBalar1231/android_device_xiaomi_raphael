@@ -24,6 +24,9 @@ allow hal_power_default {
 # Allow powerhal to access devfreq
 allow hal_power_default sysfs_kgsl:lnk_file r_file_perms;
 
+# Allow powerhal to access powerhint attributes
+allow hal_power_default media_rw_data_file:file { read getattr };
+
 # Rule for hal_power_default to access graphics composer process
 unix_socket_connect(hal_power_default, pps, hal_graphics_composer_default);
 

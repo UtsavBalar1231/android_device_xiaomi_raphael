@@ -1,8 +1,16 @@
 # Allow vendor_init to set persist_camera_prop
 set_prop(vendor_init, vendor_camera_prop)
 set_prop(vendor_init, persist_camera_prop)
-
-allow vendor_init proc_sched_energy_aware:file w_file_perms;
 set_prop(vendor_init, power_prop)
+set_prop(vendor_init, vendor_ssr_prop)
 
+allow vendor_init system_file:file read;
 allow vendor_init debugfs_clk:file write;
+
+allow vendor_init {
+  ipa_dev
+  proc_dirty
+  proc_sched_energy_aware
+}:file w_file_perms;
+
+
