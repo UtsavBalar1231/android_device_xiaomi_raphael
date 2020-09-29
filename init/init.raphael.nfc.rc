@@ -3,3 +3,13 @@ on init && property:ro.boot.hwc=GLOBAL
 
 on init && property:ro.boot.hwc=CN
     setprop ro.boot.product.hardware.sku raphael
+
+on property:ro.boot.product.hardware.sku=raphael
+    enable nqnfc_2_0_hal_service
+
+service nqnfc_2_0_hal_service /vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
+    override
+    class hal
+    user nfc
+    group nfc
+    disabled
