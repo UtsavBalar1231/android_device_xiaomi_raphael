@@ -70,7 +70,6 @@ BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
 # Display
 TARGET_SCREEN_DENSITY := 440
-TARGET_USES_ION := true
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
@@ -87,8 +86,8 @@ TARGET_SURFACEFLINGER_FOD_LIB := \
 TARGET_USES_FOD_ZPOS := true
 
 # HIDL
-DEVICE_FRAMEWORK_MANIFEST_FILE := \
-    $(DEVICE_PATH)/vintf/framework_manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
 
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/manifest.xml \
@@ -107,7 +106,7 @@ BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom androidboot.console=ttyMSM0
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
-#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3
 BOARD_KERNEL_CMDLINE += androidboot.vbmeta.avb_version=1.0
 BOARD_KERNEL_CMDLINE += service_locator.enable=1
@@ -116,9 +115,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 4096
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CONFIG := raphael_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/raphael
+KERNEL_DEFCONFIG := raphael_defconfig
 #Disable appended dtb
 TARGET_KERNEL_APPEND_DTB := true
 # Set Header version for bootimage
@@ -216,7 +213,6 @@ VENDOR_SECURITY_PATCH := 2021-02-01
 USE_SENSOR_MULTI_HAL := true
 
 # Sepolicy
-include device/qcom/sepolicy_vndr/SEPolicy.mk
 include device/xiaomi/raphael-sepolicy/raphael-sepolicy.mk
 
 # Vendor init
