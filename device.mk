@@ -234,6 +234,7 @@ PRODUCT_PACKAGES += \
     init.raphael.rc \
     init.raphael.usb.rc \
     init.raphael.usb.sh \
+    init.raphael.wlan.rc \
     init.target.rc \
     ueventd.raphael.rc
 
