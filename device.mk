@@ -65,20 +65,30 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
+    android.hardware.soundtrigger@2.2-impl \
+    android.hardware.soundtrigger@2.3-impl \
     android.hardware.bluetooth.audio@2.0-impl
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.bluetooth.default \
+    audio.hearing_aid.default \
     audio.usb.default \
     audio.r_submix.default
 
 PRODUCT_PACKAGES += \
-    libvolumelistener \
+    libbatterylistener \
+    libcomprcapture \
+    libexthwplugin \
+    libhdmiedid \
+    libhfp \
+    libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors \
-    libqcompostprocbundle
+    libsndmonitor \
+    libspkrprot \
+    libvolumelistener
 
 PRODUCT_PACKAGES += \
     tinymix \
@@ -125,7 +135,8 @@ PRODUCT_PACKAGES += \
     libbthost_if \
     libldacBT_dec \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
@@ -136,9 +147,14 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    vendor.xiaomi.hardware.motor@1.0.vendor \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service_64 \
+    libcamera2ndk_vendor \
     libdng_sdk.vendor \
-    libshim_megvii
+    libshim_megvii \
+    vendor.qti.hardware.camera.device@1.0.vendor \
+    vendor.qti.hardware.camera.postproc@1.0.vendor \
+    vendor.xiaomi.hardware.motor@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
