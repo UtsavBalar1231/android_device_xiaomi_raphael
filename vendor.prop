@@ -142,12 +142,6 @@ persist.vendor.data.mode=concurrent
 ro.vendor.nfc.repair=1
 ro.vendor.se.type=eSE,HCE,UICC
 
-# PASR
-vendor.power.pasr.enabled=false
-
-# Perf
-ro.vendor.extension_library=libqti-perfd-client.so
-
 # Qualcomm System Daemon
 persist.vendor.qcomsysd.enabled=1
 
