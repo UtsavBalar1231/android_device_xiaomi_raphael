@@ -41,7 +41,7 @@ persist.vendor.dpm.nsrm.bkg.evt=3955
 persist.vendor.overlay.izat.optin=rro
 
 # Graphics
-ro.opengles.version=196610
+ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.msmnile.api30
 
 # HWUI
 ro.hwui.texture_cache_size=72
