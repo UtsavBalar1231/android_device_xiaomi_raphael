@@ -955,11 +955,6 @@ vendor/lib64/libqcbor.so
 vendor/lib64/libqtikeymaster4.so
 vendor/lib64/libspcom.so
 
-# Keystore
-vendor/lib64/libkeystore-engine-wifi-hidl.so
-vendor/lib64/libkeystore-wifi-hidl.so
-vendor/lib64/vendor.qti.hardware.wifi.keystore@1.0.so
-
 # Listen
 vendor/etc/sound_trigger_mixer_paths.xml
 vendor/etc/sound_trigger_mixer_paths_wcd9340.xml
@@ -1862,9 +1857,7 @@ vendor/bin/spectraltool
 vendor/bin/vendor_cmd_tool
 vendor/bin/wifilearner
 vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
-vendor/lib/libqsap_sdk.so
 vendor/lib/libwapi_cert.so
-vendor/lib64/libqsap_sdk.so
 vendor/lib64/libwapi_cert.so
 vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
 
