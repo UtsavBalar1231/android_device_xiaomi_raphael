@@ -170,21 +170,8 @@ PRODUCT_COPY_FILES += \
 # Display
 TARGET_BOARD_PLATFORM := msmnile
 
--include hardware/qcom/display/config/display-board.mk
--include hardware/qcom/display/config/display-product.mk
-include vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-product.mk
-include vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk
-
 PRODUCT_PACKAGES += \
     libtinyxml
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.has_wide_color_display=true \
-    ro.surface_flinger.has_HDR_display=true \
-    ro.surface_flinger.use_color_management=true \
-    ro.surface_flinger.wcg_composition_dataspace=143261696 \
-    ro.surface_flinger.protected_contents=true \
-    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.ad=1 \
@@ -394,6 +381,7 @@ PRODUCT_COPY_FILES += \
 
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
+    display \
     perf
 
 PRODUCT_PACKAGES += \
