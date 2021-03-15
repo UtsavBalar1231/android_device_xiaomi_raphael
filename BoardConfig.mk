@@ -222,5 +222,8 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 # VNDK
 BOARD_VNDK_VERSION := current
 
+# WLAN
+WIFI_HIDL_FEATURE_AWARE := false
+
 # Inherit from the proprietary version
 include vendor/xiaomi/raphael/BoardConfigVendor.mk
