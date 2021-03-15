@@ -13,7 +13,6 @@ vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsprpc.so
 vendor/lib/libcdsp_default_listener.so
 vendor/lib/libcdsprpc.so
-vendor/lib/libfastcrc.so
 vendor/lib/libfastrpc_utf_stub.so
 vendor/lib/libmdsprpc.so
 vendor/lib/libsdsprpc.so
@@ -292,7 +291,6 @@ vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2vop.so
 vendor/lib/libcom.qti.chinodeutils.so
 vendor/lib/libft2vendor.so
-vendor/lib/libgui_vendor.so
 vendor/lib/libmialgo_fs.so
 vendor/lib/libmialgo_rfs.so
 vendor/lib/libmialgo_utils.so
@@ -433,7 +431,6 @@ vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2vop.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libft2vendor.so
-vendor/lib64/libgui_vendor.so
 vendor/lib64/libmialgo_fs.so
 vendor/lib64/libmialgo_rfs.so
 vendor/lib64/libmialgo_sd.so
@@ -988,8 +985,6 @@ vendor/bin/vppservice
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libFlacSwDec.so
-vendor/lib/libI420colorconvert.so
--vendor/lib/libMpeg4SwEncoder.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxAlacDec.so
 vendor/lib/libOmxAlacDecSw.so
@@ -1002,13 +997,10 @@ vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxG711Dec.so
 vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxSwVdec.so
--vendor/lib/libOmxSwVencMpeg4.so
 vendor/lib/libOmxVpp.so
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libdsd2pcm.so
-vendor/lib/libmm-color-convertor.so
 vendor/lib/libstagefright_soft_qtiflacdec.so
-vendor/lib/libswvdec.so
 vendor/lib/libvppclient.so
 vendor/lib/libvpphcp.so
 vendor/lib/libvpphvx.so
@@ -1021,8 +1013,6 @@ vendor/lib/vendor.qti.hardware.vpp@1.3.so
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
 vendor/lib64/libFlacSwDec.so
-vendor/lib64/libI420colorconvert.so
-vendor/lib64/libMpeg4SwEncoder.so
 vendor/lib64/libOmxAacDec.so
 vendor/lib64/libOmxAlacDec.so
 vendor/lib64/libOmxAlacDecSw.so
@@ -1034,12 +1024,9 @@ vendor/lib64/libOmxEvrcDec.so
 vendor/lib64/libOmxG711Dec.so
 vendor/lib64/libOmxQcelp13Dec.so
 vendor/lib64/libOmxSwVdec.so
-vendor/lib64/libOmxSwVencMpeg4.so
 vendor/lib64/libOmxVpp.so
 vendor/lib64/libOmxWmaDec.so
-vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libstagefright_soft_qtiflacdec.so
-vendor/lib64/libswvdec.so
 vendor/lib64/libvppclient.so
 vendor/lib64/libvpphcp.so
 vendor/lib64/libvpphvx.so
@@ -1049,14 +1036,6 @@ vendor/lib64/libvpptestutils.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so
-
-# Media (C2)
-vendor/bin/hw/vendor.qti.media.c2@1.0-service
-vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
-vendor/lib/libqcodec2.so
-vendor/lib/libcodec2_vndk.so
-vendor/lib64/libqcodec2.so
-vendor/lib64/libcodec2_vndk.so
 
 # MDM
 vendor/bin/ks
