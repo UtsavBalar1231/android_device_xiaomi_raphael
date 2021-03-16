@@ -72,7 +72,7 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 					fi
 				fi
 			;;
-			"COURBET" | "SWEET" | "VAYU")
+			"COURBET" | "SWEET" | "VAYU" | "NABU")
 				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
 					setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
 				elif [ "$buildvariant" = "eng" ]; then
@@ -90,14 +90,24 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 	else
 		case "$(getprop ro.baseband)" in
 			"apq")
-				setprop persist.vendor.usb.config diag,adb
+				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
+					setprop persist.vendor.usb.config diag,adb
+				elif [ "$buildvariant" = "eng" ]; then
+					setprop persist.vendor.usb.config diag,adb
+				else
+					if [ -z "$debuggable" -o "$debuggable" = "1"  ]; then
+						setprop persist.vendor.usb.config adb
+					else
+						setprop persist.vendor.usb.config none
+					fi
+				fi
 			;;
 		*)
 		case "$soc_hwplatform" in
 			"Dragon" | "SBC")
 				setprop persist.vendor.usb.config diag,adb
 			;;
-			"CMI" | "UMI" | "PICASSO" | "MONET" | "VANGOGH" | "LMI" | "COURBET" | "SWEET" | "ALIOTH" | "THYME" | "VAYU")
+			"CMI" | "UMI" | "PICASSO" | "MONET" | "VANGOGH" | "LMI" | "COURBET" | "SWEET" | "ALIOTH" | "THYME" | "VAYU" | "ENUMA" | "NABU")
 				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
 					setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
 				elif [ "$buildvariant" = "eng" ]; then
@@ -150,15 +160,8 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 	              "sdm845" | "sdm710")
 		          setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
 		      ;;
-	              "msmnile" | "sm6150" | "trinket" | "lito" | "atoll")
+	              "msmnile" | "sm6150" | "trinket" | "lito" | "atoll" | "bengal" | "lahaina" | "holi")
 			  setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
-		      ;;
-                      "lahaina")
-			      if [ -d /config/usb_gadget/g1/functions/qdss.qdss ]; then
-				      setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
-			      else
-				      setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
-			      fi
 		      ;;
 	              *)
 		          setprop persist.vendor.usb.config diag,adb
@@ -171,6 +174,12 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 	      ;;
 	  esac
       fi
+fi
+
+# This check is needed for GKI 1.0 targets where QDSS is not available
+if [ "$(getprop persist.vendor.usb.config)" == "diag,serial_cdev,rmnet,dpl,qdss,adb" -a \
+     ! -d /config/usb_gadget/g1/functions/qdss.qdss ]; then
+      setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
 fi
 
 # Start peripheral mode on primary USB controllers for Automotive platforms
@@ -196,7 +205,18 @@ if [ -d /config/usb_gadget ]; then
 		serialno=1234567
 		echo $serialno > /config/usb_gadget/g1/strings/0x409/serialnumber
 	fi
+
+	persist_comp=`getprop persist.vendor.usb.config`
+	comp=`getprop sys.usb.config`
+	echo $persist_comp
+	echo $comp
+	if [ "$comp" != "$persist_comp" ]; then
+		echo "setting sys.usb.config"
+		setprop sys.usb.config $persist_comp
+	fi
+
 	setprop vendor.usb.configfs 1
+	setprop sys.usb.configfs 1
 fi
 
 # update product

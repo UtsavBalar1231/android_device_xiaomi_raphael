@@ -1,5 +1,4 @@
-//
-// Copyright (C) 2019-2021 The LineageOS Project
+// Copyright (C) 2021 Paranoid Android
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,7 +11,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
 
 cc_library_static {
     name: "libinit_raphael",
@@ -22,4 +20,56 @@ cc_library_static {
         "system/core/init",
     ],
     shared_libs: ["libbase"],
+}
+
+prebuilt_etc {
+    name: "fstab.qcom",
+    src: "fstab.qcom",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.raphael.rc",
+    src: "init.raphael.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "init.target.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.dcvs.sh",
+    src: "init.qti.dcvs.sh",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.usb.rc",
+    src: "init.qcom.usb.rc",
+    vendor: true,
+    sub_dir: "init/hw",
+}
+
+sh_binary {
+    name: "init.qcom.usb.sh",
+    src: "init.qcom.usb.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.mi.usb.sh",
+    src: "init.mi.usb.sh",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.raphael.rc",
+    filename: "ueventd.rc",
+    src: "ueventd.raphael.rc",
+    vendor: true,
 }

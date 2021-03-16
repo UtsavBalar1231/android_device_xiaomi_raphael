@@ -197,10 +197,6 @@ PRODUCT_PACKAGES += \
     f2fs_io \
     check_f2fs
 
-# Fstab
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
-
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
@@ -242,17 +238,14 @@ PRODUCT_BOOT_JARS += \
 
 # Init
 PRODUCT_PACKAGES += \
+    fstab.qcom \
     init.mi.usb.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.rc \
-    init.qcom.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.qti.dcvs.sh \
     init.raphael.rc \
-    init.recovery.qcom.rc \
     init.target.rc \
-    ueventd.qcom.rc
+    ueventd.raphael.rc
 
 # IRSC
 PRODUCT_COPY_FILES += \
@@ -334,6 +327,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     bt \
     display \
+    init \
     media-legacy \
     perf \
     vibrator \
