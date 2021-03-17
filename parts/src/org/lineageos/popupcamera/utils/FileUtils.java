@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.utils;
+package org.lineageos.popupcamera.utils;
 
 import android.util.Log;
 import java.io.BufferedReader;
@@ -24,8 +24,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.NullPointerException;
-import java.lang.SecurityException;
 
 public final class FileUtils {
     private static final String TAG = "FileUtils";

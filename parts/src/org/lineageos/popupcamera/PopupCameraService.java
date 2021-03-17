@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The LineageOS Project
+ * Copyright (C) 2020-2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,12 +14,11 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.popupcamera;
+package org.lineageos.popupcamera;
 
 import android.annotation.NonNull;
 import android.app.AlertDialog;
 import android.app.Service;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -29,7 +28,6 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.hardware.camera2.CameraManager;
 import android.media.AudioAttributes;
-import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Handler;
 import android.os.IBinder;
@@ -39,8 +37,8 @@ import android.os.SystemClock;
 import android.os.UserHandle;
 import android.util.Log;
 import android.view.WindowManager;
-import org.lineageos.settings.R;
-import org.lineageos.settings.utils.FileUtils;
+import org.lineageos.popupcamera.R;
+import org.lineageos.popupcamera.utils.FileUtils;
 import vendor.xiaomi.hardware.motor.V1_0.IMotor;
 import vendor.xiaomi.hardware.motor.V1_0.IMotorCallback;
 import vendor.xiaomi.hardware.motor.V1_0.MotorEvent;
@@ -60,10 +58,14 @@ public class PopupCameraService extends Service implements Handler.Callback {
     private boolean mMotorCalibrating = false;
     private boolean mErrorDialogShowing;
     private final Object mLock = new Object();
+    private PopupCameraPreferences mPopupCameraPreferences;
     private SensorManager mSensorManager;
     private Sensor mFreeFallSensor;
-    private PopupCameraPreferences mPopupCameraPreferences;
     private SoundPool mSoundPool;
+
+    private boolean mLedBusy = false;
+    private boolean mLedBreathing = false;
+    private String mLedBrightness = "0";
 
     private CameraManager.AvailabilityCallback availabilityCallback =
             new CameraManager.AvailabilityCallback() {
@@ -133,7 +135,6 @@ public class PopupCameraService extends Service implements Handler.Callback {
                                         .setFlags(AudioAttributes.FLAG_AUDIBILITY_ENFORCED)
                                         .build())
                         .build();
-
         String[] soundNames = getResources().getStringArray(R.array.popupcamera_effects_names);
         mSounds = new int[soundNames.length];
         for (int i = 0; i < soundNames.length; i++) {
@@ -284,9 +285,12 @@ public class PopupCameraService extends Service implements Handler.Callback {
 
     private void lightUp(boolean open) {
         if (mPopupCameraPreferences.isLedAllowed()) {
-            // Save the active LED effects
-            String ledBreathing = FileUtils.readOneLine(Constants.LEFT_LED_BREATH_PATH);
-            String ledBrightness = FileUtils.readOneLine(Constants.LEFT_LED_BRIGHTNESS_PATH);
+            // Save the active LED effects if it's not our effect and mark the LED as busy
+            if (!mLedBusy) {
+                mLedBreathing = FileUtils.readOneLine(Constants.LEFT_LED_BREATH_PATH).equals("1");
+                mLedBrightness = FileUtils.readOneLine(Constants.LEFT_LED_BRIGHTNESS_PATH);
+            }
+            mLedBusy = true;
 
             // Reset the active LED effects
             setLed("breath", "0");
@@ -302,7 +306,7 @@ public class PopupCameraService extends Service implements Handler.Callback {
             setLed("breath", "1");
 
             mHandler.postDelayed(() -> {
-                // Disable the breth effect
+                // Disable the breath effect
                 setLed("brightness", "0");
 
                 // Restore default breath parameters
@@ -311,11 +315,14 @@ public class PopupCameraService extends Service implements Handler.Callback {
                 setLed("step_ms", "70");
 
                 // Restore the previous LED effects
-                if (ledBreathing.equals("1")) {
-                    FileUtils.writeLine(Constants.LEFT_LED_BREATH_PATH, ledBreathing);
+                if (mLedBreathing) {
+                    FileUtils.writeLine(Constants.LEFT_LED_BREATH_PATH, "1");
                 } else {
-                    FileUtils.writeLine(Constants.LEFT_LED_BRIGHTNESS_PATH, ledBrightness);
+                    FileUtils.writeLine(Constants.LEFT_LED_BRIGHTNESS_PATH, mLedBrightness);
                 }
+
+                // Unmark the LED as busy since our effect is done
+                mLedBusy = false;
             }, 1400);
         }
     }
@@ -383,11 +390,6 @@ public class PopupCameraService extends Service implements Handler.Callback {
     }
 
     private void playSoundEffect(String state) {
-        AudioManager audioManager =
-                (AudioManager) getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
-        if (audioManager.getRingerMode() != AudioManager.RINGER_MODE_NORMAL) {
-            return;
-        }
         int soundEffect = Integer.parseInt(mPopupCameraPreferences.getSoundEffect());
         if (soundEffect != -1) {
             if (state.equals(Constants.CLOSE_CAMERA_STATE)) {
