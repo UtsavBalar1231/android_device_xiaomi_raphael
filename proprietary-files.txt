@@ -124,7 +124,7 @@ vendor/firmware/mono.cnt|0b5ab0f7cdd157cfa5f595e27faf9adc7678548d
 system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
 -system_ext/framework/audiosphere.jar|db76dab5f44013265df54ae41073184d9a0423e9
 vendor/lib/soundfx/libasphere.so|44cd20e13920888b29d3b2e4bb0b2559a746bf8f
-vendor/lib/soundfx/libmisoundfx.so|d93841e625a66038a50c21103d72c29127a5da5c
+vendor/lib/soundfx/libmisoundfx.so|375e43ba3b0e2e17449eec205528e8bf22946cd5
 vendor/lib/soundfx/libqcbassboost.so|1ba18d0410e19c040c81808bbb367478e747f449
 vendor/lib/soundfx/libqcreverb.so|c095f38c799087c74ba1115ef82bfbf493e2bec6
 vendor/lib/soundfx/libqcvirt.so|c3fb12b7b63e6c11650f8abc6d9a271839eb92ce
@@ -138,8 +138,8 @@ vendor/lib64/soundfx/libdirac.so|e01670fb725626c63369082362fcb63c35e1d7a5
 vendor/lib64/soundfx/libshoebox.so|81b3312b54e147c8b5375c712a004661fb78e8bf
 
 # Audio (Hardware) - from miui
-vendor/lib/hw/audio.primary.msmnile.so|a36dfcddcca69aa006b4d502d43d338d75e632f9
-vendor/lib64/hw/audio.primary.msmnile.so|7320c35f03808748f7ab41b6487ec1747ab11524
+vendor/lib/hw/audio.primary.msmnile.so|a6d7090e1eebed6235d207ce64898b17b7828cda
+vendor/lib64/hw/audio.primary.msmnile.so|48cb9d11ea3d09cf6b3c340418f932b51a5cf5a6
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
@@ -279,7 +279,7 @@ vendor/lib/camera/fdconfigpreview.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib/camera/fdconfigpreviewlite.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib/camera/fdconfigvideo.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib/camera/fdconfigvideolite.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
-vendor/lib/hw/camera.qcom.so|852e42f915bd76f1e449763a4fd709ae5e7edd1f
+vendor/lib/hw/camera.qcom.so|496d3db438b3a2a104ce674ba46b1c8e2726585d
 vendor/lib/hw/com.qti.chi.override.so|94d0675a4e2417ea4be0b9efd37f0dbba1a95ac2
 vendor/lib/libFaceGrade.so|a1eecc9cbd069ea0574ea09a06a903d7873e162b
 vendor/lib/libHalSuperSensorServer.so|d929c66fdca7fd78f8c84d25d1f41afc52f8cb9f
@@ -399,7 +399,7 @@ vendor/lib64/camera/fdconfigpreview.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib64/camera/fdconfigpreviewlite.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib64/camera/fdconfigvideo.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib64/camera/fdconfigvideolite.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
-vendor/lib64/hw/camera.qcom.so|2c6367d56483302b46cd87d2175afe38c30d022d
+vendor/lib64/hw/camera.qcom.so|458ccee362cbc59feffbc710c3ce99e964ad3c4e
 vendor/lib64/hw/com.qti.chi.override.so|c50629be1f6e2bd87afe0c6cbdb93eb017de9f24
 vendor/lib64/libFaceGrade.so|b3f316c56ab78ec550e8248c8d3ae7ca720d009e
 vendor/lib64/libHalSuperSensorServer.so|faa4d602f226da8d92b197f49ffe29f0ad506426
@@ -414,7 +414,7 @@ vendor/lib64/libalLDC.so|94ecf7486ce9ca4c6c26adcadcc12d64b02ead4c
 vendor/lib64/libalRnBRT_GL_GBWRAPPER.so|49526861862bbdb9046d6e98bf97b008ad7ba175
 vendor/lib64/libalhLDC.so|2475eac72173f10f963ce83ea1a32dc4b059fa82
 vendor/lib64/libarcsat.so|78e3f651edff6907453515670e513b1dbbcf7f52
-vendor/lib64/libarcsoft_beautyshot.so|4b188f6cdd467e3366df198663ef59780d3f533a
+vendor/lib64/libarcsoft_beautyshot.so|1faae34b96337876f94503a1048f4ce408219dec
 vendor/lib64/libarcsoft_bodyslim.so|b4b3b5e55ce6833a3c020c1d6fbe9d0adad78aea
 vendor/lib64/libarcsoft_distortion_correction.so|86a6cf76276688aa5b658fd4c9721db84376e355
 vendor/lib64/libarcsoft_dualcam_image_optical_zoom.so|e8611505506c3190f0981fd2ffed406b323ec755
@@ -699,7 +699,7 @@ vendor/etc/hdr_config.cfg|14bd7906643998c6b6bb51be5f20007232eaccc3
 vendor/etc/sdr_config.cfg|4e0901a44be67f92b747e2c34d13f8858f9cc010
 
 # Display QDCM - from V12.0.0.8.QFKMIXM
-vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml|90daa54f60d60b7c5648befe5472ceddc31db93f
+vendor/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml|9e5b1931b0c971561afff5ecb6a2e57518997003
 
 # Display (Postprocessing)
 vendor/bin/hw/vendor.display.color@1.0-service
@@ -783,17 +783,17 @@ vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so|393d8da1466f00bc
 
 # Firmware (ipa) - from miui
 vendor/firmware/ipa_uc.b00|eb39c03229e8aa6b98d85dedddcd6578d7bc8595
-vendor/firmware/ipa_uc.b01|d392bf127b411fa7ca71a14e0ac861e58c8b3c07
+vendor/firmware/ipa_uc.b01|029d67be4cbb772cd847d1d39882eb217eb84bda
 vendor/firmware/ipa_uc.b02|3b10a38f61f127c190649d7cbf8ae508c797e924
-vendor/firmware/ipa_uc.elf|f1644f357b2e9f7fd8824f0d0f665a2d5ca20414
-vendor/firmware/ipa_uc.mdt|bc1ea9b34dc4c7ce0a28f57dfbd18db6b214ce75
+vendor/firmware/ipa_uc.elf|24ad2185417cb2eb893589e77efd58279d730d5a
+vendor/firmware/ipa_uc.mdt|05cd1f7985b3110cf189aa2d5bee9c7c8e6eefa1
 vendor/firmware/ipa_fws.b00|27a002d0b54085560b38805fb940d6b960707a48
-vendor/firmware/ipa_fws.b01|374da3f3aac585a61d4c24edc92987797a2e3812
+vendor/firmware/ipa_fws.b01|3181ba0047771276665ca73dbde80117a538b3a9
 vendor/firmware/ipa_fws.b02|d6fe0e71d363af74132569d85e9dc6e5d9cc1800
 vendor/firmware/ipa_fws.b03|c07cfef57f8f694b4cee41e78700614efbedf2bc
 vendor/firmware/ipa_fws.b04|e3552692a635dceca369cab6d9349091b669c80a
-vendor/firmware/ipa_fws.elf|3ba82d48fcefeddb090f13c3549dc827360a71ef
-vendor/firmware/ipa_fws.mdt|83af2f7973379b7332052c9f7e9e1263c15fb2e4
+vendor/firmware/ipa_fws.elf|36273c1027a259175e41bea5ce802ba7290e5dbf
+vendor/firmware/ipa_fws.mdt|edd996d9b4fcf4846d427a10b5270c612194a277
 
 # Firmware (graphics) - from miui
 vendor/firmware/a612_rgmu.bin|cb8705d5bc417e53863ed16ab0bed2fc1489646f
@@ -802,10 +802,10 @@ vendor/firmware/a630_gmu.bin|32bb4acc7767c47ddb487ed7cb998d465ee462f2
 vendor/firmware/a630_sqe.fw|e25094f97b44244775cc38a9d909fba6bd4cf76b
 vendor/firmware/a640_gmu.bin|fb1eab0dd5f313abf31441e2209c9398da7df98b
 vendor/firmware/a640_zap.b00|7afc31984d7eeacdd0fc78118ad8fa46c9b3e4ee
-vendor/firmware/a640_zap.b01|d298e66a09d7db1f84b4323d08f8661e3f200a5e
+vendor/firmware/a640_zap.b01|b541a39c701a98cd3d0cc637279a8e1c1ba4cb8b
 vendor/firmware/a640_zap.b02|27d26ca0ae982c065fb7ab58be73bf3ca2e8bdf3
-vendor/firmware/a640_zap.elf|29a46b086f485a021d30e8ac6ed2dccac273c22a
-vendor/firmware/a640_zap.mdt|a04bc1eabb56bdcd50ec57c0c634e830cfd4905e
+vendor/firmware/a640_zap.elf|57af48bf0cecee8c51a11491cd63ed6406e54af2
+vendor/firmware/a640_zap.mdt|fb2764316239daa92fd8c561f3b91d0387302370
 
 # Firmware (touchscreen) - from miui
 vendor/firmware/goodix_gt9886_limit_f11_first.tporder|acbd886e032c7d5b84fb0a075f924971dccfe587
@@ -1636,9 +1636,9 @@ vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
 # SecureMSM (system) - from miui
 -system_ext/app/com.qualcomm.qti.services.secureui/com.qualcomm.qti.services.secureui.apk|9dde836961403436322400de4a1b7866906ae21d
 system_ext/lib/libsecureui_svcsock_system.so|188422852414a1ed03dff51d66da9b8da6bac624
-system_ext/lib/libsecureuisvc_jni.so|675098f954b22b93de7b2996d3107b689d76199c
+system_ext/lib/libsecureuisvc_jni.so|15f4bc77bdcca5d6576be5460fbc75e3cfa97193
 system_ext/lib/vendor.qti.hardware.tui_comm@1.0.so|f07a91a84a0bc4697af92fa62970cbb9485d2118
-system_ext/lib64/libsecureuisvc_jni.so|46b46abc69b6e175a87b117eace49b5edd6132b1
+system_ext/lib64/libsecureuisvc_jni.so|5966e45aac6817df0b3b299cf8f7c67d7ca4cf3b
 system_ext/lib64/libsecureui_svcsock_system.so|0fcf5f699e19180d4c36928abc14416d44e5af8c
 system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so|8aed41d0a379f296466428bc97bca35fd75de5af
 
@@ -1777,6 +1777,6 @@ vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
 vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
 
 # WiFi (Xiaomi) - from miui
-vendor/bin/cnss-daemon|69f43bb4fa9ad94e92e003339d44e4d958ec5db5
+vendor/bin/cnss-daemon|fc11cd14ba5d4f9f40eb200dd83fe33a5b171274
 vendor/bin/cnss_diag|f9d326ce7732671ad85526c6c3600d82b9162b20
 vendor/bin/nv_mac|7eb3fd076e39d6bc1a498ed5256709069c210c46
