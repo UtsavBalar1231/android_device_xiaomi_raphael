@@ -343,12 +343,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
 PRODUCT_PACKAGES += \
     libjson \
 
-# RCS
-PRODUCT_PACKAGES += \
-    com.android.ims.rcsmanager \
-    PresencePolling \
-    RcsService
-
 # RIL
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
