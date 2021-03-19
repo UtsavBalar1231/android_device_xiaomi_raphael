@@ -41,11 +41,6 @@ PRODUCT_VENDOR_KERNEL_HEADERS := \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-system
-
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_files
@@ -312,6 +307,16 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
+# Overlays
+PRODUCT_PACKAGES += \
+    AOSPAXiaomiSM8150Settings \
+    AOSPAXiaomiSM8150SystemUI \
+    AOSPARaphaelSystemUI \
+    FrameworksResTarget \
+    RaphaelFrameworks \
+    XiaomiSM8150SystemUI \
+    RaphaelSystemUI \
+
 # Pixel Offline charger
 PRODUCT_PACKAGES += \
     charger_res_images \
@@ -331,6 +336,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     display \
     init \
     media-legacy \
+    overlay \
     perf \
     usb \
     vibrator \
