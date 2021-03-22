@@ -33,7 +33,6 @@ persist.vendor.cne.feature=1
 ro.charger.enable_suspend=true
 
 # DPM
-persist.vendor.dpm.feature=1
 persist.vendor.dpm.loglevel=0
 persist.vendor.dpm.nsrm.bkg.evt=3955
 
