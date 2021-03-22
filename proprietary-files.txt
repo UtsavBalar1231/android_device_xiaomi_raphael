@@ -399,7 +399,7 @@ vendor/lib64/camera/fdconfigpreview.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib64/camera/fdconfigpreviewlite.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib64/camera/fdconfigvideo.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib64/camera/fdconfigvideolite.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
-vendor/lib64/hw/camera.qcom.so|458ccee362cbc59feffbc710c3ce99e964ad3c4e
+vendor/lib64/hw/camera.qcom.so|9e071790295f364c97538d152f67f42867804c35
 vendor/lib64/hw/com.qti.chi.override.so|c50629be1f6e2bd87afe0c6cbdb93eb017de9f24
 vendor/lib64/libFaceGrade.so|b3f316c56ab78ec550e8248c8d3ae7ca720d009e
 vendor/lib64/libHalSuperSensorServer.so|faa4d602f226da8d92b197f49ffe29f0ad506426
@@ -745,8 +745,8 @@ vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|c35e1a6f9a6faff1906
 vendor/lib64/libwvhidl.so|eb7e90cec72946f7bda1ea3a589d9b3867a3f6a7
 
 # DRM widevine - from RAPHAEL V12.0.4.0.QFKINXM
-vendor/lib/liboemcrypto.so|744cc6de6ead251592a816f947425c7705982c60
-vendor/lib64/liboemcrypto.so|dea31ebeaa6e634ade312046f896c2f67fd5e285
+vendor/lib/liboemcrypto.so|7a8be0a1b2b6f7441c658dd1a1550510c8c154ee
+vendor/lib64/liboemcrypto.so|b99e70b63bb2fa92fd5660382b6b16e1998968cc
 modem/image/widevine.b00:vendor/firmware/widevine.b00|d306b8986e114b8eecf3e18e1bf66d39cdbc9389
 modem/image/widevine.b01:vendor/firmware/widevine.b01|bc5367fe588bad33af4d877e79947df8f32c9941
 modem/image/widevine.b02:vendor/firmware/widevine.b02|f270abc3c95c975bd200320b3af7bf9b1a52173e
