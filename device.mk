@@ -297,6 +297,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    AOSPAXiaomiSM8150Frameworks \
     AOSPAXiaomiSM8150Settings \
     AOSPAXiaomiSM8150SystemUI \
     AOSPARaphaelSystemUI \

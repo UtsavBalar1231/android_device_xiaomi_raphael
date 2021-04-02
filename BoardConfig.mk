@@ -62,6 +62,9 @@ BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 # Display
 TARGET_SCREEN_DENSITY := 440
 
+# Gestures
+TARGET_TAP_TO_WAKE_EVENT_NODE := "/dev/input/event3"
+
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
@@ -172,9 +175,6 @@ TARGET_USES_MKE2FS := true
 
 # Platform
 TARGET_BOARD_PLATFORM := msmnile
-
-# Power
-TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
