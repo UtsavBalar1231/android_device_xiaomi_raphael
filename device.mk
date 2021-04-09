@@ -156,6 +156,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
+# ConfigStore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # Display
 TARGET_BOARD_PLATFORM := msmnile
 
@@ -168,9 +172,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
     ro.vendor.display.sensortype=2
 
-# ConfigStore
-PRODUCT_PACKAGES += \
-    disable_configstore
+PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/configs/display/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml \
+   $(LOCAL_PATH)/configs/display/dsi_ss_fhd_ea8076_cmd_display_mi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dsi_ss_fhd_ea8076_cmd_display_mi.xml \
+   $(LOCAL_PATH)/configs/display/dsi_ss_fhd_ea8076_global_cmd_display_mi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dsi_ss_fhd_ea8076_global_cmd_display_mi.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
@@ -394,10 +399,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
 # WiFi
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay \
-    WifiOverlay
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
