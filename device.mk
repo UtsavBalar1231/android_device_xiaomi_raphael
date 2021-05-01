@@ -226,10 +226,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.mi.usb.sh \
-    init.qcom.usb.rc \
-    init.qcom.usb.sh \
     init.qti.dcvs.sh \
     init.raphael.rc \
+    init.raphael.usb.rc \
+    init.raphael.usb.sh \
     init.target.rc \
     ueventd.raphael.rc
 
