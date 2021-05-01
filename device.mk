@@ -40,7 +40,8 @@ PRODUCT_COPY_FILES += \
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
-    fs_config_files
+    fs_config_files \
+    liboemaids_vendor
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -126,6 +127,7 @@ TARGET_USE_QTI_BT_STACK := true
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
     audio.bluetooth.default \
+    com.qualcomm.qti.bluetooth_audio@1.0.vendor \
     libbthost_if \
     libldacBT_dec \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \

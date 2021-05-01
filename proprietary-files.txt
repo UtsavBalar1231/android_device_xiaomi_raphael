@@ -1,4 +1,4 @@
-# All unpinned blobs here are extracted from LA.UM.9.1.r1-09100-SMxxx0.0
+# All unpinned blobs here are extracted from LA.UM.9.1.r1-09200-SMxxx0.0
 
 # ADSPRPC - from miui
 vendor/bin/adsprpcd|c1b9fe936ffbcd5a875baa785f4b9629366083ec
@@ -658,7 +658,6 @@ vendor/lib/libnetmgr_common.so
 vendor/lib/libnetmgr_nr_fusion.so
 vendor/lib/libnetmgr_rmnet_ext.so
 vendor/lib/libnlnetmgr.so
-vendor/lib/liboemaids_vendor.so
 vendor/lib/libqcmaputils.so
 vendor/lib/libqdi.so
 vendor/lib/libqdp.so
@@ -672,7 +671,6 @@ vendor/lib64/libnetmgr_common.so
 vendor/lib64/libnetmgr_nr_fusion.so
 vendor/lib64/libnetmgr_rmnet_ext.so
 vendor/lib64/libnlnetmgr.so
-vendor/lib64/liboemaids_vendor.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
@@ -848,6 +846,7 @@ vendor/etc/sec_config
 vendor/etc/xtra_root_cert.pem
 vendor/etc/xtwifi.conf
 vendor/lib/hw/vendor.qti.gnss@4.0-impl.so
+vendor/lib/libaoa.so
 vendor/lib/libasn1cper.so
 vendor/lib/libasn1crt.so
 vendor/lib/libasn1crtx.so
@@ -882,6 +881,7 @@ vendor/lib/vendor.qti.gnss@4.0.so
 vendor/lib/vendor.qti.gnss@4.0-service.so
 vendor/lib/vendor.qti.hardware.qccsyshal@1.0.so
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
+vendor/lib64/libaoa.so
 vendor/lib64/libasn1cper.so
 vendor/lib64/libasn1crt.so
 vendor/lib64/libasn1crtx.so
@@ -922,7 +922,7 @@ vendor/lib/liblocdiagiface.so|35eab97f70e6660d778a2b5ac70428b80e4b0b47
 vendor/lib64/liblocdiagiface.so|31f88106b5aeceff4264f06ce5299455c3058499
 
 # Graphics (Updatable)
--vendor/app/com.qualcomm.qti.gpudrivers.msmnile.api30/com.qualcomm.qti.gpudrivers.msmnile.api30.apk
+-vendor/app/com.qualcomm.qti.gpudrivers.msmnile.api30/com.qualcomm.qti.gpudrivers.msmnile.api30.apk;PRESIGNED
 
 # Graphics (SDM)
 vendor/lib/libhdr_tm.so
@@ -1335,6 +1335,7 @@ vendor/lib/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 vendor/lib/vendor.qti.hardware.radio.uim@1.0.so
 vendor/lib/vendor.qti.hardware.radio.uim@1.1.so
 vendor/lib/vendor.qti.hardware.radio.uim@1.2.so
+vendor/lib64/deviceInfoServiceModule.so
 vendor/lib64/liblqe.so
 vendor/lib64/libqcrilFramework.so
 vendor/lib64/libqcrildatactl.so
@@ -1676,6 +1677,7 @@ vendor/bin/spdaemon
 vendor/etc/init/init.spdaemon.rc
 vendor/lib/libbase64.so
 vendor/lib/libcpion.so
+vendor/lib/libcppf.so
 vendor/lib/libhdcpsrm.so
 vendor/lib/libhdcp1prov.so
 vendor/lib/libhdcp2p2prov.so

@@ -27,4 +27,4 @@ Camera  | 48MP(Primary) 8MP(Ultra-wide) 13MP(Telephoto)
 
 ## Proprietary-files.txt
 All miui blobs are extracted from raphael-user 11 RKQ1.200826.002 21.4.29 release-keys
-All unpinned blobs are extracted from LA.UM.9.1.r1-09100-SMxxx0.0
+All unpinned blobs are extracted from LA.UM.9.1.r1-09200-SMxxx0.0
