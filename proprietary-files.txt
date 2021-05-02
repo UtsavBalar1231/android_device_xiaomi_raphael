@@ -772,13 +772,10 @@ vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc|b7ebf3f89
 -vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml|49e82d6a43981e254d224dcc93b3ff27e0fb8407
 vendor/lib/hw/fingerprint.goodix_fod.so|555cc68594ed908ecbea9f88dfad1bb5fd81ba38
 vendor/lib/libgf_hal.so|043e2c054cd197cbfeb99ba1eae7cb2ce382ca33
-vendor/lib/vendor.goodix.hardware.biometrics.fingerprint@2.1.so|fa3518be64523a9f8c157992c22571ca62dd2709
 vendor/lib64/hw/fingerprint.goodix_fod.so|6c5ff96de82cca1c2ce9aeae79cdb3f92fcb1a16
 vendor/lib64/libarm_proxy_skel.so|6debebf554aee45b79c566937720e7ac88bc0cc5
 vendor/lib64/libgf_hal.so|566c943e59fb5972d2629010dd6903b24b0c8b0e
 vendor/lib64/libhvx_proxy_stub.so|f1731311a709ae847b905141164e66f5ec393c02
-vendor/lib64/vendor.goodix.hardware.biometrics.fingerprint@2.1.so|8ccb882cb397650f4e4f7797423ce70ff5e7a7a1
-vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so|393d8da1466f00bc4479f557ce5d41b879831eee
 
 # Firmware (ipa) - from miui
 vendor/firmware/ipa_uc.b00|eb39c03229e8aa6b98d85dedddcd6578d7bc8595

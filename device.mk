@@ -188,7 +188,9 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    vendor.aospa.biometrics.fingerprint.inscreen@1.0-service
+    vendor.aospa.biometrics.fingerprint.inscreen@1.0-service \
+    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
+    vendor.xiaomi.hardware.fingerprintextension@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
