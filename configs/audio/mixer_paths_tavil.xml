@@ -2389,9 +2389,21 @@
         <path name="hfp-sco headphones" />
     </path>
 
-   <path name="hfp-sco-wb">
+    <path name="speaker-tr">
+    </path>
+
+    <path name="speaker-tl">
+    </path>
+
+    <path name="speaker-br">
+    </path>
+
+    <path name="speaker-bl">
+    </path>
+
+    <path name="hfp-sco-wb">
         <path name="hfp-sco" />
-   </path>
+    </path>
 
     <path name="hfp-sco-wb headphones">
         <path name="hfp-sco headphones" />
