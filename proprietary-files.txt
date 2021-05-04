@@ -694,10 +694,6 @@ vendor/lib/libdiagjni.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdiagjni.so
 
-# Display (Calibration) - from miui
-vendor/etc/hdr_config.cfg|14bd7906643998c6b6bb51be5f20007232eaccc3
-vendor/etc/sdr_config.cfg|4e0901a44be67f92b747e2c34d13f8858f9cc010
-
 # Display (Postprocessing)
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/ppd
