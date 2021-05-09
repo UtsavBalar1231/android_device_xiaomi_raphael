@@ -165,9 +165,6 @@ PRODUCT_PACKAGES += \
 # Display
 TARGET_BOARD_PLATFORM := msmnile
 
-PRODUCT_PACKAGES += \
-    libtinyxml
-
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.sensortype=2
 
@@ -175,9 +172,6 @@ PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/configs/display/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_samsung_ea8076_fhd_cmd_dsi_panel.xml \
    $(LOCAL_PATH)/configs/display/dsi_ss_fhd_ea8076_cmd_display_mi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dsi_ss_fhd_ea8076_cmd_display_mi.xml \
    $(LOCAL_PATH)/configs/display/dsi_ss_fhd_ea8076_global_cmd_display_mi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dsi_ss_fhd_ea8076_global_cmd_display_mi.xml
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -347,15 +341,11 @@ TARGET_COMMON_QTI_COMPONENTS := \
     wfd \
     wlan
 
-PRODUCT_PACKAGES += \
-    libjson \
-
 # RIL
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     libril \
     librilutils \
-    librmnetctl \
     libxml2
 
 # Recovery
@@ -391,10 +381,6 @@ PRODUCT_PACKAGES += \
 # Telephony
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml
-
-# Touchscreen
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
 # Verified Boot
 PRODUCT_COPY_FILES += \
