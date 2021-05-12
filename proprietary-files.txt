@@ -1,33 +1,33 @@
 # All unpinned blobs here are extracted from LA.UM.9.1.r1-09200-SMxxx0.0
 
-# ADSPRPC - from miui
-vendor/bin/adsprpcd|c1b9fe936ffbcd5a875baa785f4b9629366083ec
-vendor/bin/cdsprpcd|63f7be350d30b9d4181ded5b9cba956bff04439c
-vendor/bin/dspservice|225fc63f14387ea978341f9418b34900c1b10ce2
-vendor/bin/loadalgo|3839131d7c782e53f1c37aff274be676730222a0
-vendor/etc/init/vendor.qti.adsprpc-service.rc|54588df8e7da58c66838028d2284986b966c2d37
-vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
-vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da9e1f263a4eec55f
-vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|8119845f8e6a24e53bdf286e19f34e9906d64e78
-vendor/lib/libadsp_default_listener.so|92ca2faf693eb488394440b94b6deb73fe9504e2
-vendor/lib/libadsprpc.so|437f6ab24e5a08de250529bf0adf5ecaed88817d
-vendor/lib/libcdsp_default_listener.so|7949a156e2fced7a60cb4099cc4ab274c3504d7e
-vendor/lib/libcdsprpc.so|de676387b859280b4fe8004e999419a6bc8ddeab
-vendor/lib/libfastrpc_utf_stub.so|c5815effc16cbbf08902c90ca405c4310ac3c32b
-vendor/lib/libmdsprpc.so|f9cabbd95f91e9fa90e21c48349adbdd825a05ff
-vendor/lib/libsdsprpc.so|091682459f41566a3909da301a06be2008efb493
-vendor/lib/libsysmon_cdsp_skel.so|ebefa806ce33f19b4f7975fb246966d6067f9c02
-vendor/lib/vendor.qti.hardware.dsp@1.0.so|94f60e5fddc9cc31306ea87420b4db9af44911b0
-vendor/lib64/libadsp_default_listener.so|84ffb0536efd42fb0ebc67c194f88da3da6ca9de
-vendor/lib64/libadsprpc.so|5e677d9e7ecc56d8c9bf7bcc49f1e717b5669aad
-vendor/lib64/libcdsp_default_listener.so|74d24246b94fe48212f93e0693000489792dfb43
-vendor/lib64/libcdsprpc.so|5723a2985d7c85197952df08da1fc6e90d1d2b5d
-vendor/lib64/libfastrpc_utf_stub.so|002c1243352a39400b72e275dfd8242a19b551a7
-vendor/lib64/libloadalgo_stub.so|b4c44128b1d402e70442686684be04c8ca93e546
-vendor/lib64/libmdsprpc.so|523f6501e39101a9d61baffccd20a0d2848e3524
-vendor/lib64/libsdsprpc.so|96ed968d5d79c3fe8c37f331082c16cf5212dc52
-vendor/lib64/libsysmon_cdsp_skel.so|c9138d776f9d4ea3d5d9d0ad4a24bfcdf7b78d76
-vendor/lib64/vendor.qti.hardware.dsp@1.0.so|b4fb4608e14ef4a74ceeec1ed6851cb139be57e9
+# ADSPRPC
+vendor/bin/adsprpcd
+vendor/bin/cdsprpcd
+vendor/bin/dspservice
+vendor/bin/loadalgo
+vendor/etc/init/vendor.qti.adsprpc-service.rc
+vendor/etc/init/vendor.qti.cdsprpc-service.rc
+vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
+vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
+vendor/lib/libadsp_default_listener.so
+vendor/lib/libadsprpc.so
+vendor/lib/libcdsp_default_listener.so
+vendor/lib/libcdsprpc.so
+vendor/lib/libfastrpc_utf_stub.so
+vendor/lib/libmdsprpc.so
+vendor/lib/libsdsprpc.so
+vendor/lib/libsysmon_cdsp_skel.so
+vendor/lib/vendor.qti.hardware.dsp@1.0.so
+vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libadsprpc.so
+vendor/lib64/libcdsp_default_listener.so
+vendor/lib64/libcdsprpc.so
+vendor/lib64/libfastrpc_utf_stub.so
+vendor/lib64/libloadalgo_stub.so
+vendor/lib64/libmdsprpc.so
+vendor/lib64/libsdsprpc.so
+vendor/lib64/libsysmon_cdsp_skel.so
+vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # ADSP-Modules - from miui
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so|136ee309e7c9892d55b3e87e45cd0ab39120658e
@@ -313,7 +313,6 @@ vendor/lib/libnanopb.so|68b41b4f1ef50335aa4f0f7fc00a00b3efe7efb1
 vendor/lib/libremosaic_daemon.so|c31a8cbaf8345f3cdcbe9c1a0c5fdcbed0615170
 vendor/lib/libsns_device_mode_stub.so|bd0a69f562df56b74ed4416320b7a344577b3666
 vendor/lib/libswregistrationalgo.so|f11b567b5947e008e5e808ec39fdc4b3fd0dc2db
-vendor/lib/libsysmon_cdsp_skel.so|ebefa806ce33f19b4f7975fb246966d6067f9c02
 vendor/lib/vendor.qti.hardware.camera.device@1.0.so|2e21d4dc8f06b6a78f9222ed00a7fa19eadaa91c
 vendor/lib/vendor.qti.hardware.camera.device@2.0.so|1f8f634218ea37ca13ef123cb696504be83eaca8
 vendor/lib/vendor.qti.hardware.camera.device@3.5.so|257e8369a938f229ce755f6de69a1f391bf6f550
@@ -461,7 +460,6 @@ vendor/lib64/libSNPE.so|9f13aef6197864e4d7d19483f74731958cb14f01
 vendor/lib64/libsnpe_dsp_domains_v2.so|5bef4d1b052e21b162e07d9372da3150616df006
 vendor/lib64/libsns_device_mode_stub.so|0e1f278c97f814d17c40760c950b204fa0b630cf
 vendor/lib64/libswregistrationalgo.so|d47dc0456142d3a0d6d8d4739ac1881ec7887364
-vendor/lib64/libsysmon_cdsp_skel.so|c9138d776f9d4ea3d5d9d0ad4a24bfcdf7b78d76
 vendor/lib64/libtriplecam_optical_zoom_control.so|4ed124cf96e346cc11d232bdfec06988cf84e8e3
 vendor/lib64/libtriplecam_video_optical_zoom.so|d06d62a3f9ad5c9330b52d55247f8d68369a6f43
 vendor/lib64/libvidhance.so|822252821acd4fc308d080e4d524ef37defd7ba1
