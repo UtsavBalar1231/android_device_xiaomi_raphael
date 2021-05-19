@@ -15,17 +15,17 @@
  * limitations under the License.
  */
 
-package org.lineageos.popupcamera;
+package co.aospa.popupcamera;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-import org.lineageos.popupcamera.PopupCameraUtils;
+import co.aospa.popupcamera.PopupCameraUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = false;
-    private static final String TAG = "XiaomiPopupCamera";
+    private static final String TAG = "PopupCamera";
 
     @Override
     public void onReceive(final Context context, Intent intent) {

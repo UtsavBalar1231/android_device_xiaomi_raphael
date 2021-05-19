@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.popupcamera.utils;
+package co.aospa.popupcamera.utils;
 
 import android.util.Log;
 import java.io.BufferedReader;

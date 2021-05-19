@@ -5,7 +5,7 @@
 //
 
 android_app {
-    name: "XiaomiPopupCamera",
+    name: "PopupCamera",
 
     srcs: ["src/**/*.java"],
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.popupcamera;
+package co.aospa.popupcamera;
 
 public class Constants {
     public static final int FREE_FALL_SENSOR_ID = 33171042;
