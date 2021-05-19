@@ -57,6 +57,132 @@ PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
 
 # Audio
+PRODUCT_ODM_PROPERTIES += \
+    ro.vendor.qti.va_odm.support=1 \
+    vendor.audio.feature.a2dp_offload.enable=true \
+    vendor.audio.feature.afe_proxy.enable=true \
+    vendor.audio.feature.anc_headset.enable=true \
+    vendor.audio.feature.audiozoom.enable=false \
+    vendor.audio.feature.battery_listener.enable=true \
+    vendor.audio.feature.compr_cap.enable=false \
+    vendor.audio.feature.compr_voip.enable=false \
+    vendor.audio.feature.compress_in.enable=false \
+    vendor.audio.feature.compress_meta_data.enable=true \
+    vendor.audio.feature.concurrent_capture.enable=false \
+    vendor.audio.feature.custom_stereo.enable=true \
+    vendor.audio.feature.deepbuffer_as_primary.enable=false \
+    vendor.audio.feature.display_port.enable=true \
+    vendor.audio.feature.dsm_feedback.enable=false \
+    vendor.audio.feature.dynamic_ecns.enable=false \
+    vendor.audio.feature.ext_hw_plugin.enable=true \
+    vendor.audio.feature.external_dsp.enable=false \
+    vendor.audio.feature.external_speaker.enable=false \
+    vendor.audio.feature.external_speaker_tfa.enable=false \
+    vendor.audio.feature.fluence.enable=true \
+    vendor.audio.feature.fm.enable=true \
+    vendor.audio.feature.hdmi_edid.enable=true \
+    vendor.audio.feature.hdmi_passthrough.enable=true \
+    vendor.audio.feature.hfp.enable=true \
+    vendor.audio.feature.hifi_audio.enable=false \
+    vendor.audio.feature.hwdep_cal.enable=false \
+    vendor.audio.feature.incall_music.enable=true \
+    vendor.audio.feature.keep_alive.enable=true \
+    vendor.audio.feature.kpi_optimize.enable=true \
+    vendor.audio.feature.maxx_audio.enable=false \
+    vendor.audio.feature.multi_voice_session.enable=true \
+    vendor.audio.feature.ras.enable=true \
+    vendor.audio.feature.record_play_concurency.enable=false \
+    vendor.audio.feature.snd_mon.enable=true \
+    vendor.audio.feature.spkr_prot.enable=true \
+    vendor.audio.feature.src_trkn.enable=true \
+    vendor.audio.feature.ssrec.enable=true \
+    vendor.audio.feature.usb_offload.enable=true \
+    vendor.audio.feature.usb_offload_burst_mode.enable=true \
+    vendor.audio.feature.usb_offload_sidetone_volume.enable=false \
+    vendor.audio.feature.vbat.enable=true \
+    vendor.audio.feature.wsa.enable=false
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    aaudio.hw_burst_min_usec=2000 \
+    aaudio.mmap_exclusive_policy=2 \
+    aaudio.mmap_policy=2 \
+    persist.vendor.audio.fluence.speaker=true \
+    persist.vendor.audio.fluence.tmic.enabled=false \
+    persist.vendor.audio.fluence.voicecall=true \
+    persist.vendor.audio.fluence.voicecomm=true \
+    persist.vendor.audio.fluence.voicerec=false \
+    persist.vendor.audio.hifi=false \
+    persist.vendor.audio.ras.enabled=false \
+    persist.vendor.audio.ring.filter.mask=0 \
+    persist.vendor.audio.voicecall.speaker.stereo=true \
+    ro.config.media_vol_steps=25 \
+    ro.config.vc_call_vol_steps=7 \
+    ro.vendor.audio.game.effect=true \
+    ro.vendor.audio.hifi=true \
+    ro.vendor.audio.ring.filter=true \
+    ro.vendor.audio.sdk.fluencetype=fluence \
+    ro.vendor.audio.sdk.ssr=false \
+    ro.vendor.audio.sfx.earadj=true \
+    ro.vendor.audio.sos=true \
+    ro.vendor.audio.soundfx.type=mi \
+    ro.vendor.audio.soundfx.usb=true \
+    ro.vendor.audio.soundtrigger.cnn.adsp.level=27 \
+    ro.vendor.audio.soundtrigger.cnn.level=27 \
+    ro.vendor.audio.soundtrigger.gmm.adsp.level=50 \
+    ro.vendor.audio.soundtrigger.gmm.level=50 \
+    ro.vendor.audio.soundtrigger.gmm.user.adsp.level=10 \
+    ro.vendor.audio.soundtrigger.gmm.user.level=10 \
+    ro.vendor.audio.soundtrigger.lowpower=true \
+    ro.vendor.audio.soundtrigger.training.level=50 \
+    ro.vendor.audio.soundtrigger.vop.adsp.level=10 \
+    ro.vendor.audio.soundtrigger.vop.level=10 \
+    ro.vendor.audio.soundtrigger.xanzn.cnn.level=25 \
+    ro.vendor.audio.soundtrigger.xanzn.gmm.level=45 \
+    ro.vendor.audio.soundtrigger.xanzn.gmm.user.level=50 \
+    ro.vendor.audio.soundtrigger.xanzn.vop.level=20 \
+    ro.vendor.audio.soundtrigger.xatx.cnn.level.high=27 \
+    ro.vendor.audio.soundtrigger.xatx.cnn.level.low=27 \
+    ro.vendor.audio.soundtrigger.xatx.cnn.level.medium=27 \
+    ro.vendor.audio.soundtrigger.xatx.gmm.level.high=50 \
+    ro.vendor.audio.soundtrigger.xatx.gmm.level.low=50 \
+    ro.vendor.audio.soundtrigger.xatx.gmm.level.medium=50 \
+    ro.vendor.audio.soundtrigger.xatx.gmm.user.level.high=10 \
+    ro.vendor.audio.soundtrigger.xatx.gmm.user.level.low=10 \
+    ro.vendor.audio.soundtrigger.xatx.gmm.user.level.medium=10 \
+    ro.vendor.audio.soundtrigger.xatx.vop.level.high=10 \
+    ro.vendor.audio.soundtrigger.xatx.vop.level.low=10 \
+    ro.vendor.audio.soundtrigger.xatx.vop.level.medium=10 \
+    ro.vendor.audio.soundtrigger=sva \
+    ro.vendor.audio.us.proximity=false \
+    ro.vendor.audio.voice.change.support=true \
+    ro.vendor.audio.voice.volume.boost=manual \
+    vendor.audio.adm.buffering.ms=6 \
+    vendor.audio.dolby.ds2.enabled=false \
+    vendor.audio.dolby.ds2.hardbypass=false \
+    vendor.audio.enable.mirrorlink=false \
+    vendor.audio.flac.sw.decoder.24bit=true \
+    vendor.audio.hal.boot.timeout.ms=20000 \
+    vendor.audio.hal.output.suspend.supported=false \
+    vendor.audio.hw.aac.encoder=false \
+    vendor.audio.offload.buffer.size.kb=32 \
+    vendor.audio.offload.gapless.enabled=true \
+    vendor.audio.offload.multiaac.enable=true \
+    vendor.audio.offload.multiple.enabled=false \
+    vendor.audio.offload.passthrough=false \
+    vendor.audio.offload.track.enable=false \
+    vendor.audio.parser.ip.buffer.size=262144 \
+    vendor.audio.safx.pbe.enabled=false \
+    vendor.audio.spkcal.copy.inhal=true \
+    vendor.audio.tunnel.encode=false \
+    vendor.audio.usb.disable.sidetone=true \
+    vendor.audio.use.sw.alac.decoder=true \
+    vendor.audio.use.sw.ape.decoder=true \
+    vendor.audio.volume.headset.gain.depcal=true \
+    vendor.audio_hal.in_period_size=144 \
+    vendor.audio_hal.period_multiplier=3 \
+    vendor.audio_hal.period_size=192 \
+    vendor.voice.path.for.pcm.voip=false
+
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@6.0-impl \
@@ -124,6 +250,19 @@ PRODUCT_COPY_FILES += \
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 TARGET_USE_QTI_BT_STACK := true
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive \
+    persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true \
+    persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false \
+    persist.vendor.qcom.bluetooth.enable.splita2dp=true \
+    persist.vendor.qcom.bluetooth.scram.enabled=true \
+    persist.vendor.qcom.bluetooth.soc=cherokee \
+    persist.vendor.qcom.bluetooth.twsp_state.enabled=true \
+    ro.bluetooth.library_name=libbluetooth_qti.so \
+    ro.vendor.bluetooth.wipower=false \
+    vendor.hw.fm.init=0 \
+    vendor.qcom.bluetooth.soc=cherokee
+
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
     audio.bluetooth.default \
@@ -139,6 +278,9 @@ PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/audio-hal/primary-hal/configs/common/bluetooth_qti_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_audio_policy_configuration.xml
 
 # Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+    camera.disable_zsl_mode=true
+
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
@@ -174,8 +316,18 @@ PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/configs/display/dsi_ss_fhd_ea8076_global_cmd_display_mi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dsi_ss_fhd_ea8076_global_cmd_display_mi.xml
 
 # DRM
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true \
+    media.mediadrmservice.enable=true
+
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
+
+# F2FS
+PRODUCT_PACKAGES += \
+    sg_write_buffer \
+    f2fs_io \
+    check_f2fs
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -187,15 +339,17 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
     vendor/pa/config/permissions/vendor.aospa.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.aospa.biometrics.fingerprint.inscreen.xml
 
-# F2FS
-PRODUCT_PACKAGES += \
-    sg_write_buffer \
-    f2fs_io \
-    check_f2fs
-
 # Freeform Multiwindow
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml
+
+# FRP
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
+# Gatekeeper
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.gatekeeper.disable_spu=true
 
 # GPS
 LOC_HIDL_VERSION = 4.0
@@ -226,6 +380,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     org.ifaa.android.manager
 
+# Incremental
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.incremental.enable=true
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -241,6 +399,10 @@ PRODUCT_PACKAGES += \
 # Keymaster
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.strongbox_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore.xml
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.crypto.volume.filenames_mode=aes-256-cts \
+    ro.hardware.keystore_desede=true
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -263,6 +425,10 @@ PRODUCT_PACKAGES += \
 # Native Public Libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
+# Netflix
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.netflix.bsp_rev=Q855-16947-1
 
 # Network
 PRODUCT_PACKAGES += \
@@ -314,6 +480,10 @@ PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/msmnile/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
 TARGET_KERNEL_VERSION := 4.14
+
+# QMI
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.qcomsysd.enabled=1
 
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \

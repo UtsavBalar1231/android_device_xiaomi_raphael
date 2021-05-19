@@ -62,9 +62,6 @@ media.aac_51_output_enabled=true
 mmp.enable.3g2=true
 persist.mm.enable.prefetch=true
 
-# Netflix custom property
-ro.netflix.bsp_rev=Q855-16947-1
-
 # NFC
 ro.nfc.port=I2C
 
