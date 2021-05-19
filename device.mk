@@ -313,11 +313,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ParanoidDoze
 
-# Pixel Offline charger
-PRODUCT_PACKAGES += \
-    charger_res_images \
-    product_charger_res_images
-
 # Power hint
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/msmnile/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
