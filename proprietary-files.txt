@@ -49,8 +49,6 @@ vendor/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so|be1c95bf8e1cccfcc9ef8c49
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so|733a5b8861bb6eb1285bb8982992531c94800997
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
 vendor/lib/rfsa/adsp/libworker_pool.so|e33c26f2072f32b94c3f1ac3e954fc25edbeb52c
-vendor/lib/rfsa/adsp/misound_karaoke_res.bin|47291d1ed9b942e3cdb24602e9eded01bf4580fb
-vendor/lib/rfsa/adsp/misound_karaokemix_res.bin|1b6114eeefa29e36f10571ae5dde4ba84625982c
 vendor/lib/rfsa/adsp/misound_res.bin|d08fb852de9a354f60c18cd5186d2e1cdbbd2ad4
 vendor/lib64/rfsa/adsp/libsns_device_mode_skel.so|733a5b8861bb6eb1285bb8982992531c94800997
 vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
@@ -64,40 +62,44 @@ vendor/lib/vendor.qti.hardware.alarm@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
-# Audio - from miui
-vendor/bin/audioflacapp|68ecf41ef40bbc90a35ff4d166b2a61461238562
-vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so|78c3d718fa0d7b15bb7a61adeb737e39e2b793e0
-vendor/lib/libadiertac.so|4b1228737d97450c34788404cc30f3752b1afa54
-vendor/lib/libadm.so|c5d8693dbec640d3366ad7620833b2e4387f3c01
-vendor/lib/libaudcal.so|afe50c7f6bba5f875904d27e40d0325ac28462c9
-vendor/lib/libaudio_log_utils.so|71ec4d31ad6c9e9a4bee8db7b5ab55b70ef7c4c3
-vendor/lib/libaudioalsa.so|448ebf789e999363f848f8a42c5f87673145d635
-vendor/lib/libaudioconfigstore.so|a00b695d8ec2666bdce729e0f947149c3b78b2b5
-vendor/lib/libaudioparsers.so|b786d5a2a8f94edb11b5334bbe981dbd2633325f
-vendor/lib/libaudioroute_ext.so|401c86a70a064355e6df3cc6224f7d8168562f96
-vendor/lib/libdrc.so|e27974e53efe0456cba96f6910ad977c6351d0b7
-vendor/lib/libhdmipassthru.so|8d893ed09b899f22a60ec30cadb93fa29b1aaa36
-vendor/lib/libqtigef.so|35dc9d1e0fcae320e38296e67a6e8e214b021575
-vendor/lib/libssrec.so|6012d16c8659f95f5c1c86a8487264dd511b7cfe
-vendor/lib/libsurround_3mic_proc.so|1d425b4b0d89f68e0f0112e8f2f73b1cd5b6dea2
-vendor/lib/libtinycompress.so|48485b61c09beaf128f1574f40fb8c9975426c8a
-vendor/lib/vendor.qti.hardware.audiohalext@1.0.so|188bfa1f6971a76651e585805698390638e35b4b
-vendor/lib/vendor.qti.voiceprint@1.0.so|e7509c079440442dc9e0884adf86fe9a8549ce96
-vendor/lib/vndk/libxlog.so|bdb3d8d8b37bd4e1e84f59d912457690e7388f2e
-vendor/lib64/hw/vendor.qti.hardware.audiohalext@1.0-impl.so|fcc2380cf4a57bcc6e7a30ed2545fb720d135c6a
-vendor/lib64/libadiertac.so|609d11219bebfaa8e6efa5978f5a127a627d28cd
-vendor/lib64/libaudcal.so|b398ea3d9fd95a7bff551ef731f6f312e7631b01
-vendor/lib64/libaudio_log_utils.so|6091c30d5724adb31a3b4c71379cc004c235905a
-vendor/lib64/libaudioalsa.so|d9316323d6d93b46c1f429cc0d4ef2271e04fd55
-vendor/lib64/libaudioconfigstore.so|3a34f90b540655ad3dc212f5228fd1d0db248a34
-vendor/lib64/libaudioparsers.so|326954ecd50e2b0a25ff0f076def93271a9bd554
-vendor/lib64/libaudioroute_ext.so|836781a56fe9a88d121f4bacddb6c55d0fd25fc8
-vendor/lib64/libhdmipassthru.so|427a84f338f3e73f035d40bdb4a4d49078642583
-vendor/lib64/libqtigef.so|f35d4922d0d2c08509e79ac265eab44eda4eff0d
-vendor/lib64/libssrec.so|6752c432ab7cc5daa9fcdb663c9fc0b14b587569
-vendor/lib64/libtinycompress.so|5dbc80eac4bd6cdb0d70b99cb9d4bcc230195f40
-vendor/lib64/vendor.qti.hardware.audiohalext@1.0.so|9a79f351d4dbe9847b9054ff91782215c053d391
-vendor/lib64/vendor.qti.voiceprint@1.0.so|18904140e8dc00c0a7d06cbcd1c9b9a3efd7c151
+# Audio
+vendor/bin/audioflacapp
+vendor/lib/libadiertac.so
+vendor/lib/libadm.so
+vendor/lib/libadpcmdec.so
+vendor/lib/libaudcal.so
+vendor/lib/libaudio_log_utils.so
+vendor/lib/libaudioalsa.so
+vendor/lib/libaudioparsers.so
+vendor/lib/libdrc.so
+vendor/lib/libdsd2pcm.so
+vendor/lib/libhdmipassthru.so
+vendor/lib/libqtigef.so
+vendor/lib/libsmwrapper.so
+vendor/lib/libssrec.so
+vendor/lib/libstagefright_soft_qtiflacdec.so
+vendor/lib/libsurround_3mic_proc.so
+vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcreverb.so
+vendor/lib/soundfx/libqcvirt.so
+vendor/lib/soundfx/libshoebox.so
+vendor/lib/vendor.qti.voiceprint@1.0.so
+vendor/lib64/libadiertac.so
+vendor/lib64/libaudcal.so
+vendor/lib64/libaudio_log_utils.so
+vendor/lib64/libaudioalsa.so
+vendor/lib64/libaudioparsers.so
+vendor/lib64/libhdmipassthru.so
+vendor/lib64/libqtigef.so
+vendor/lib64/libssrec.so
+vendor/lib64/libstagefright_soft_qtiflacdec.so
+vendor/lib64/soundfx/libasphere.so
+vendor/lib64/soundfx/libqcbassboost.so
+vendor/lib64/soundfx/libqcreverb.so
+vendor/lib64/soundfx/libqcvirt.so
+vendor/lib64/soundfx/libshoebox.so
+vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Audio (ACDB) - from miui
 vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb|86c307fcb4e081de04147f911ae3fce90aa2ddaa
@@ -120,27 +122,6 @@ vendor/lib64/libacdbrtac.so|ccc8650ab214f83a5de0a4735132dabae4b3d100
 # Audio (Amplifier) - from miui
 vendor/firmware/tfa98xx.cnt|90ff4ddd45cd4eb82dc53ecff0e7309db9b062a7
 vendor/firmware/mono.cnt|0b5ab0f7cdd157cfa5f595e27faf9adc7678548d
-
-# AudioFX - from miui
-system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
--system_ext/framework/audiosphere.jar|db76dab5f44013265df54ae41073184d9a0423e9
-vendor/lib/soundfx/libasphere.so|44cd20e13920888b29d3b2e4bb0b2559a746bf8f
-vendor/lib/soundfx/libmisoundfx.so|899b441d5b533c723a6d5295c982a0acccd13966
-vendor/lib/soundfx/libqcbassboost.so|1ba18d0410e19c040c81808bbb367478e747f449
-vendor/lib/soundfx/libqcreverb.so|c095f38c799087c74ba1115ef82bfbf493e2bec6
-vendor/lib/soundfx/libqcvirt.so|c3fb12b7b63e6c11650f8abc6d9a271839eb92ce
-vendor/lib/soundfx/libdirac.so|1a0ece10a80574188167bba189ec11045c3c2e5a
-vendor/lib/soundfx/libshoebox.so|8c25f9bd479540f1b43c6827020376a40a667270
-vendor/lib64/soundfx/libasphere.so|7d01becf38d808b232aef88025e4dd69839b788f
-vendor/lib64/soundfx/libqcbassboost.so|2e6d825cc8588aba837bdf1b784de832b36aa79c
-vendor/lib64/soundfx/libqcreverb.so|ac6117264342bde72964510ce0a79744b011d7bf
-vendor/lib64/soundfx/libqcvirt.so|c84047754c2af27540808247b0b54c88bdf5283a
-vendor/lib64/soundfx/libdirac.so|e01670fb725626c63369082362fcb63c35e1d7a5
-vendor/lib64/soundfx/libshoebox.so|81b3312b54e147c8b5375c712a004661fb78e8bf
-
-# Audio (Hardware) - from miui
-vendor/lib/hw/audio.primary.msmnile.so|10c5be8b05f1332c4cec22a2345650502a13f96b
-vendor/lib64/hw/audio.primary.msmnile.so|f3ba315772b204577bda222e415a846993e74116
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
@@ -282,7 +263,7 @@ vendor/lib/camera/fdconfigpreview.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib/camera/fdconfigpreviewlite.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib/camera/fdconfigvideo.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib/camera/fdconfigvideolite.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
-vendor/lib/hw/camera.qcom.so|b1d21d5b34679ea2db72258089387ae9c501e377
+vendor/lib/hw/camera.qcom.so|8e407539010ade656affcb0f72df6d7ca2660fb4
 vendor/lib/hw/com.qti.chi.override.so|f3c1905e5623c89dbe69caf6a225473647d80273
 vendor/lib/libFaceGrade.so|a1eecc9cbd069ea0574ea09a06a903d7873e162b
 vendor/lib/libHalSuperSensorServer.so|795eb33eccfe5ec4b12be528332a1f6dd4fce7ed
@@ -402,7 +383,7 @@ vendor/lib64/camera/fdconfigpreview.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib64/camera/fdconfigpreviewlite.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib64/camera/fdconfigvideo.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
 vendor/lib64/camera/fdconfigvideolite.bin|f3dfb2db6955221919245f382dd6132d9b28c7ad
-vendor/lib64/hw/camera.qcom.so|24bb6a103ecdef53d6aa95c6d169fad744f3f3de
+vendor/lib64/hw/camera.qcom.so|32db356d679fa523587b68b1ea18ec802b18a4cc
 vendor/lib64/hw/com.qti.chi.override.so|b08159c671b99e09e9f5f3c218ae994fdfd3c8fb
 vendor/lib64/libFaceGrade.so|b3f316c56ab78ec550e8248c8d3ae7ca720d009e
 vendor/lib64/libHalSuperSensorServer.so|59e7bd40acf52610a62c5ade0cb3083e2a09f6ff
@@ -427,7 +408,7 @@ vendor/lib64/libarcsoft_dualcam_refocus_front.so|3d316f5c50675d8c39125b2c08a77db
 vendor/lib64/libarcsoft_dualcam_refocus_rear_t.so|6d3171b53a65ae638f49903365ec0684924b2e2c
 vendor/lib64/libarcsoft_dualcam_refocus_rear_w.so|abc8c47eb1636d4f4b18f6a3be1324905a96028d
 vendor/lib64/libarcsoft_high_dynamic_range.so|e1475ba00fc0f4ef79918efa6847bfd188398942
-vendor/lib64/libarcsoft_low_light_hdr.so|750e1157377397fa1d94fcfb6ac1dfdf4f5fed3d
+vendor/lib64/libarcsoft_low_light_hdr.so|f672663e7fc15f6de4cd729822f12fa54ceee63a
 vendor/lib64/libarcsoft_portrait_lighting.so|1bc7b14fe69e617529e4dda74e4ef1081ea2ada0
 vendor/lib64/libarcsoft_portrait_lighting_c.so|ca42fa6fc25e231ca70e1caf80a08b18ccfd3d99
 vendor/lib64/libarcsoft_preview_deflicker.so|6f1da5473c0b79e99da1d2ea27db736f06931774
@@ -761,7 +742,7 @@ vendor/lib64/libfastcvdsp_stub.so
 -vendor/lib64/libfastcvopt.so
 
 # Fingerprint - from miui
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service|4e1d005a5e57f337b664bb6308e286ea46e7a38c
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service|ffc1bd99ff7a03446288e7855451b94afa896e5d
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc|b7ebf3f899906f3d8bb4db8d957984a1773edd20
 -vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml|49e82d6a43981e254d224dcc93b3ff27e0fb8407
 vendor/lib/hw/fingerprint.goodix_fod.so|555cc68594ed908ecbea9f88dfad1bb5fd81ba38
@@ -773,17 +754,17 @@ vendor/lib64/libhvx_proxy_stub.so|f1731311a709ae847b905141164e66f5ec393c02
 
 # Firmware (ipa) - from miui
 vendor/firmware/ipa_uc.b00|eb39c03229e8aa6b98d85dedddcd6578d7bc8595
-vendor/firmware/ipa_uc.b01|8ac1ddb205b4eaa98b33f81d50794a72569cbede
+vendor/firmware/ipa_uc.b01|8ff7520a5c6dff8430740b3d671cf9954fe06f2c
 vendor/firmware/ipa_uc.b02|3b10a38f61f127c190649d7cbf8ae508c797e924
-vendor/firmware/ipa_uc.elf|45b58cffca091202c3c287c7639e9933293c09f4
-vendor/firmware/ipa_uc.mdt|f0542fc771c77fe4c911bd6194b6673cbb84860d
+vendor/firmware/ipa_uc.elf|92ed3fa0f11cd498666f368c3a2d5abddccf9d2a
+vendor/firmware/ipa_uc.mdt|ae9cecf8db8f2042bd099ff5512afbe181cbd5d2
 vendor/firmware/ipa_fws.b00|27a002d0b54085560b38805fb940d6b960707a48
-vendor/firmware/ipa_fws.b01|1d6b622afbfb12676fba6fae229c952014d999df
+vendor/firmware/ipa_fws.b01|eaf9748426507f916c58f48e3d911bca46af1cf9
 vendor/firmware/ipa_fws.b02|d6fe0e71d363af74132569d85e9dc6e5d9cc1800
 vendor/firmware/ipa_fws.b03|c07cfef57f8f694b4cee41e78700614efbedf2bc
 vendor/firmware/ipa_fws.b04|e3552692a635dceca369cab6d9349091b669c80a
-vendor/firmware/ipa_fws.elf|f076f5e0df2a70f81f37fd2c297576fb945cd405
-vendor/firmware/ipa_fws.mdt|75cded38025c3489a4409d3d0ee5673eab04df5e
+vendor/firmware/ipa_fws.elf|64280f269f2729cc2c2b630ee23cbae8a9896865
+vendor/firmware/ipa_fws.mdt|552e5fd9a4fda4d655d87a75771d73ea2646c38c
 
 # Firmware (graphics) - from miui
 vendor/firmware/a612_rgmu.bin|cb8705d5bc417e53863ed16ab0bed2fc1489646f
@@ -792,10 +773,10 @@ vendor/firmware/a630_gmu.bin|32bb4acc7767c47ddb487ed7cb998d465ee462f2
 vendor/firmware/a630_sqe.fw|e25094f97b44244775cc38a9d909fba6bd4cf76b
 vendor/firmware/a640_gmu.bin|fb1eab0dd5f313abf31441e2209c9398da7df98b
 vendor/firmware/a640_zap.b00|7afc31984d7eeacdd0fc78118ad8fa46c9b3e4ee
-vendor/firmware/a640_zap.b01|8f93c16f1f239b1182b3301af95d1b656b83a42f
+vendor/firmware/a640_zap.b01|5bec9f735132c72338a1bf31dad90c3bb317a3a5
 vendor/firmware/a640_zap.b02|27d26ca0ae982c065fb7ab58be73bf3ca2e8bdf3
-vendor/firmware/a640_zap.elf|6d8e7891388a04b3db32b6c827fdc06711582c3f
-vendor/firmware/a640_zap.mdt|6f30c34479272961f9d4f5c9421c68fe11d90ec8
+vendor/firmware/a640_zap.elf|f7f3ee005999cf33f579a9546986c143f2019aab
+vendor/firmware/a640_zap.mdt|d36e6595324eaed854cf528cdb08e45155df534a
 
 # Firmware (touchscreen) - from miui
 vendor/firmware/goodix_gt9886_limit_f11_first.tporder|acbd886e032c7d5b84fb0a075f924971dccfe587

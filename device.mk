@@ -81,7 +81,7 @@ PRODUCT_ODM_PROPERTIES += \
     vendor.audio.feature.fluence.enable=true \
     vendor.audio.feature.fm.enable=true \
     vendor.audio.feature.hdmi_edid.enable=true \
-    vendor.audio.feature.hdmi_passthrough.enable=true \
+    vendor.audio.feature.hdmi_passthrough.enable=false \
     vendor.audio.feature.hfp.enable=true \
     vendor.audio.feature.hifi_audio.enable=false \
     vendor.audio.feature.hwdep_cal.enable=false \
@@ -95,7 +95,7 @@ PRODUCT_ODM_PROPERTIES += \
     vendor.audio.feature.snd_mon.enable=true \
     vendor.audio.feature.spkr_prot.enable=true \
     vendor.audio.feature.src_trkn.enable=true \
-    vendor.audio.feature.ssrec.enable=true \
+    vendor.audio.feature.ssrec.enable=false \
     vendor.audio.feature.usb_offload.enable=true \
     vendor.audio.feature.usb_offload_burst_mode.enable=true \
     vendor.audio.feature.usb_offload_sidetone_volume.enable=false \
@@ -124,35 +124,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.audio.sdk.ssr=false \
     ro.vendor.audio.sfx.earadj=true \
     ro.vendor.audio.sos=true \
-    ro.vendor.audio.soundfx.type=mi \
-    ro.vendor.audio.soundfx.usb=true \
-    ro.vendor.audio.soundtrigger.cnn.adsp.level=27 \
-    ro.vendor.audio.soundtrigger.cnn.level=27 \
-    ro.vendor.audio.soundtrigger.gmm.adsp.level=50 \
-    ro.vendor.audio.soundtrigger.gmm.level=50 \
-    ro.vendor.audio.soundtrigger.gmm.user.adsp.level=10 \
-    ro.vendor.audio.soundtrigger.gmm.user.level=10 \
-    ro.vendor.audio.soundtrigger.lowpower=true \
-    ro.vendor.audio.soundtrigger.training.level=50 \
-    ro.vendor.audio.soundtrigger.vop.adsp.level=10 \
-    ro.vendor.audio.soundtrigger.vop.level=10 \
-    ro.vendor.audio.soundtrigger.xanzn.cnn.level=25 \
-    ro.vendor.audio.soundtrigger.xanzn.gmm.level=45 \
-    ro.vendor.audio.soundtrigger.xanzn.gmm.user.level=50 \
-    ro.vendor.audio.soundtrigger.xanzn.vop.level=20 \
-    ro.vendor.audio.soundtrigger.xatx.cnn.level.high=27 \
-    ro.vendor.audio.soundtrigger.xatx.cnn.level.low=27 \
-    ro.vendor.audio.soundtrigger.xatx.cnn.level.medium=27 \
-    ro.vendor.audio.soundtrigger.xatx.gmm.level.high=50 \
-    ro.vendor.audio.soundtrigger.xatx.gmm.level.low=50 \
-    ro.vendor.audio.soundtrigger.xatx.gmm.level.medium=50 \
-    ro.vendor.audio.soundtrigger.xatx.gmm.user.level.high=10 \
-    ro.vendor.audio.soundtrigger.xatx.gmm.user.level.low=10 \
-    ro.vendor.audio.soundtrigger.xatx.gmm.user.level.medium=10 \
-    ro.vendor.audio.soundtrigger.xatx.vop.level.high=10 \
-    ro.vendor.audio.soundtrigger.xatx.vop.level.low=10 \
-    ro.vendor.audio.soundtrigger.xatx.vop.level.medium=10 \
-    ro.vendor.audio.soundtrigger=sva \
     ro.vendor.audio.us.proximity=false \
     ro.vendor.audio.voice.change.support=true \
     ro.vendor.audio.voice.volume.boost=manual \
@@ -185,42 +156,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@6.0-impl \
-    android.hardware.audio.effect@6.0-impl \
     android.hardware.soundtrigger@2.2-impl \
     android.hardware.soundtrigger@2.3-impl
 
-PRODUCT_PACKAGES += \
-    audio.a2dp.default \
-    audio.hearing_aid.default \
-    audio.usb.default \
-    audio.r_submix.default
-
-PRODUCT_PACKAGES += \
-    liba2dpoffload \
-    libbatterylistener \
-    libcomprcapture \
-    libexthwplugin \
-    libhdmiedid \
-    libhfp \
-    libqcompostprocbundle \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libqcomvoiceprocessingdescriptors \
-    libsndmonitor \
-    libspkrprot \
-    libvolumelistener
-
-PRODUCT_PACKAGES += \
-    tinymix \
-    libaudio-resampler
-
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_configs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_configs.xml \
-    $(LOCAL_PATH)/configs/audio/audio_configs_stock.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_configs_stock.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    $(LOCAL_PATH)/configs/audio/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
     $(LOCAL_PATH)/configs/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
     $(LOCAL_PATH)/configs/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml
@@ -238,11 +178,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
-
-PRODUCT_COPY_FILES += \
-    vendor/qcom/opensource/audio-hal/primary-hal/configs/msmnile/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer_tavil.txt \
-    vendor/qcom/opensource/audio-hal/primary-hal/configs/msmnile/mixer_paths_pahu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_pahu.xml \
-    vendor/qcom/opensource/audio-hal/primary-hal/configs/msmnile/graphite_ipc_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/graphite_ipc_platform_info.xml
 
 # Bluetooth
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
@@ -490,6 +425,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
+    audio \
     av \
     bt \
     display \
