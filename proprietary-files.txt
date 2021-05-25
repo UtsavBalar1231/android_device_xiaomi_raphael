@@ -1174,10 +1174,11 @@ vendor/lib64/unnhal-acc-adreno.so
 vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hvx.so
 
-# NFC
-vendor/etc/libnfc-mtp-SN100.conf
-vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf
-vendor/lib/libsn100u_fw.so
+# NFC - from miui
+vendor/etc/libnfc-mtp-SN100.conf|a9570f1f620dcad9b9d5fe24eb3255c3f13c6099
+vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf|a9570f1f620dcad9b9d5fe24eb3255c3f13c6099
+vendor/etc/libnfc-nxp.conf|61067ce98e1f47710b0de5227c599357582f00d2
+vendor/lib/libsn100u_fw.so|cf3f556751015b1e6bd92ad386f5326c5145ca18
 
 # NPU
 vendor/bin/npu_launcher
@@ -1645,6 +1646,20 @@ system_ext/lib/vendor.qti.hardware.tui_comm@1.0.so|f07a91a84a0bc4697af92fa62970c
 system_ext/lib64/libsecureuisvc_jni.so|cba5db541f049581886bfcc69e30f98a38a84e7f
 system_ext/lib64/libsecureui_svcsock_system.so|0fcf5f699e19180d4c36928abc14416d44e5af8c
 system_ext/lib64/vendor.qti.hardware.tui_comm@1.0.so|8aed41d0a379f296466428bc97bca35fd75de5af
+
+# SecureMSM (GPQESE)
+vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
+vendor/bin/hw/vendor.qti.secure_element@1.2-service
+vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
+vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
+vendor/lib/hw/vendor.qti.esepowermanager@1.1-impl.so
+vendor/lib/android.hardware.secure_element@1.0-impl.so
+vendor/lib/vendor.qti.esepowermanager@1.0.so
+vendor/lib/vendor.qti.esepowermanager@1.1.so
+vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
+vendor/lib64/android.hardware.secure_element@1.0-impl.so
+vendor/lib64/vendor.qti.esepowermanager@1.0.so
+vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # SecureMSM (SECDISP)
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
