@@ -27,7 +27,8 @@ LOCAL_C_INCLUDES += \
     external/tinycompress/include \
     vendor/qcom/opensource/audio-hal/primary-hal/hal/audio_extn \
     vendor/qcom/opensource/audio-hal/primary-hal/hal/msm8974 \
-    vendor/qcom/opensource/audio-hal/primary-hal/hal
+    vendor/qcom/opensource/audio-hal/primary-hal/hal \
+    $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/techpack/audio/include
 
 LOCAL_HEADER_LIBRARIES += \
     libhardware_headers \
