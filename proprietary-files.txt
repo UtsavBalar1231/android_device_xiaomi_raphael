@@ -1,4 +1,4 @@
-# All unpinned blobs here are extracted from LA.UM.9.1.r1-09200-SMxxx0.0
+# All unpinned blobs here are extracted from LA.UM.9.1.r1-09600-SMxxx0.0
 
 # ADSPRPC
 vendor/bin/adsprpcd
@@ -1386,6 +1386,7 @@ vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql
+vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql
 vendor/radio/qcril_database/qcril.db
 
 # QCV
